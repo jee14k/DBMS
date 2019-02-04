@@ -1,0 +1,250 @@
+SQL> CREATE TABLE EMPLOYEE(emp_id int PRIMARY KEY,emp_name varchar(10) NOT NULL,designation varchar(10),salary float,dept_id int UNIQUE);
+
+Table created.
+
+SQL> CREATE TABLE DEPARTMENT(dept_id int PRIMARY KEY,dept_name varchar(12) NOT NULL,dept_function varchar(10),location_id int UNIQUE);
+
+Table created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id);
+Enter value for emp_id: 01
+Enter value for emp_name: Adarsh
+Enter value for designation: Manager
+Enter value for salary: 100000
+Enter value for dept_id: 1740201
+old   1: INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(01,'Adarsh','Manager',100000,1740201)
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id);
+Enter value for emp_id: 02
+Enter value for emp_name: Tony
+Enter value for designation: Cook
+Enter value for salary: 50000
+Enter value for dept_id: 1740202
+old   1: INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(02,'Tony','Cook',50000,1740202)
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id);
+Enter value for emp_id: 03
+Enter value for emp_name: Ashbin
+Enter value for designation: Clerk
+Enter value for salary: 70000
+Enter value for dept_id: 1740203
+old   1: INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(03,'Ashbin','Clerk',70000,1740203)
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id);
+Enter value for emp_id: 04
+Enter value for emp_name: Chaitanya
+Enter value for designation: Coder
+Enter value for salary: 120000
+Enter value for dept_id: 1740204
+old   1: INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(04,'Chaitanya','Coder',120000,1740204)
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id);
+Enter value for emp_id: 05
+Enter value for emp_name: Prithul
+Enter value for designation: Manager
+Enter value for salary: 140000
+Enter value for dept_id: 1740205
+old   1: INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(05,'Prithul','Manager',140000,1740205)
+
+1 row created.
+
+SQL> INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id);
+Enter value for dept_id: 1740201
+Enter value for dept_name: IT
+Enter value for dept_function: Service
+Enter value for location_id: 111
+old   1: INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id)
+new   1: INSERT INTO DEPARTMENT VALUES(1740201,'IT','Service',111)
+
+1 row created.
+
+SQL> INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id);
+Enter value for dept_id: 1740202
+Enter value for dept_name: Food
+Enter value for dept_function: Hospitality
+Enter value for location_id: 222
+old   1: INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id)
+new   1: INSERT INTO DEPARTMENT VALUES(1740202,'Food','Hospitality',222)
+INSERT INTO DEPARTMENT VALUES(1740202,'Food','Hospitality',222)
+                                             *
+ERROR at line 1:
+ORA-12899: value too large for column "SYSTEM"."DEPARTMENT"."DEPT_FUNCTION" 
+(actual: 11, maximum: 10) 
+
+
+SQL> INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id);
+Enter value for dept_id: 1740202
+Enter value for dept_name: Food
+Enter value for dept_function: Eatery
+Enter value for location_id: 222
+old   1: INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id)
+new   1: INSERT INTO DEPARTMENT VALUES(1740202,'Food','Eatery',222)
+
+1 row created.
+
+SQL> INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id);
+Enter value for dept_id: 1740203
+Enter value for dept_name: Hospital
+Enter value for dept_function: Service
+Enter value for location_id: 333
+old   1: INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id)
+new   1: INSERT INTO DEPARTMENT VALUES(1740203,'Hospital','Service',333)
+
+1 row created.
+
+SQL> INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id);
+Enter value for dept_id: 1740204
+Enter value for dept_name: Computer
+Enter value for dept_function: Service
+Enter value for location_id: 444
+old   1: INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id)
+new   1: INSERT INTO DEPARTMENT VALUES(1740204,'Computer','Service',444)
+
+1 row created.
+
+SQL> INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id);
+Enter value for dept_id: 1740205
+Enter value for dept_name: Hospital
+Enter value for dept_function: Serve
+Enter value for location_id: 555
+old   1: INSERT INTO DEPARTMENT VALUES(&dept_id,'&dept_name','&dept_function',&location_id)
+new   1: INSERT INTO DEPARTMENT VALUES(1740205,'Hospital','Serve',555)
+
+1 row created.
+
+SQL> SELECT * FROM EMPLOYEE;
+
+    EMP_ID EMP_NAME   DESIGNATIO     SALARY    DEPT_ID                          
+---------- ---------- ---------- ---------- ----------                          
+         1 Adarsh     Manager        100000    1740201                          
+         2 Tony       Cook            50000    1740202                          
+         3 Ashbin     Clerk           70000    1740203                          
+         4 Chaitanya  Coder          120000    1740204                          
+         5 Prithul    Manager        140000    1740205                          
+
+SQL> INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id);
+Enter value for emp_id: 01
+Enter value for emp_name: Jeevan
+Enter value for designation: Servant
+Enter value for salary: 12000
+Enter value for dept_id: 1740206
+old   1: INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(01,'Jeevan','Servant',12000,1740206)
+INSERT INTO EMPLOYEE VALUES(01,'Jeevan','Servant',12000,1740206)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.SYS_C007361) violated 
+
+
+SQL> INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id);
+Enter value for emp_id: 06
+Enter value for emp_name: NULL
+Enter value for designation: Servant
+Enter value for salary: 13000
+Enter value for dept_id: 1740206
+old   1: INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(06,'NULL','Servant',13000,1740206)
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id);
+Enter value for emp_id: 06
+Enter value for emp_name: 
+Enter value for designation: Gamer
+Enter value for salary: 20000
+Enter value for dept_id: 1740207
+old   1: INSERT INTO EMPLOYEE VALUES(&emp_id,'&emp_name','&designation',&salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(06,'','Gamer',20000,1740207)
+INSERT INTO EMPLOYEE VALUES(06,'','Gamer',20000,1740207)
+                               *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SYSTEM"."EMPLOYEE"."EMP_NAME") 
+
+SQL> ALTER TABLE EMPLOYEE MODIFY(SALARY FLOAT CHECK(SALARY>0));
+
+Table altered.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&EMP_ID,'&EMP_NAME','&DESIGNATION',&Salary,&dept_id);
+Enter value for emp_id: 7
+Enter value for emp_name: Jeevan
+Enter value for designation: HR
+Enter value for salary: 0
+Enter value for dept_id: 1740207
+old   1: INSERT INTO EMPLOYEE VALUES(&EMP_ID,'&EMP_NAME','&DESIGNATION',&Salary,&dept_id)
+new   1: INSERT INTO EMPLOYEE VALUES(7,'Jeevan','HR',0,1740207)
+INSERT INTO EMPLOYEE VALUES(7,'Jeevan','HR',0,1740207)
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.SYS_C007373) violated
+
+SQL> SELECT emp_name,designation,dept_name from EMPLOYEE,DEPARTMENT WHERE EMPLOYEE.emp_id=DEPARTMENT.dept_id AND designation = 'MANAGER';
+
+no rows selected
+
+SQL> SELECT * FROM EMPLOYEE;
+
+    EMP_ID EMP_NAME   DESIGNATIO     SALARY    DEPT_ID                          
+---------- ---------- ---------- ---------- ----------                          
+         1 Adarsh     Manager        100000    1740201                          
+         2 Tony       Cook            50000    1740202                          
+         3 Ashbin     Clerk           70000    1740203                          
+         4 Chaitanya  Coder          120000    1740204                          
+         5 Prithul    Manager        140000    1740205                          
+         6 NULL       Servant         13000    1740206                          
+
+6 rows selected.
+
+SQL> SELECT * FROM DEPARTMENT;
+
+   DEPT_ID DEPT_NAME    DEPT_FUNCT LOCATION_ID                                  
+---------- ------------ ---------- -----------                                  
+   1740201 IT           Service            111                                  
+   1740202 Food         Eatery             222                                  
+   1740203 Hospital     Service            333                                  
+   1740204 Computer     Service            444                                  
+   1740205 Hospital     Serve              555                                  
+
+SQL> SELECT emp_name,designation,dept_name from EMPLOYEE,DEPARTMENT WHERE EMPLOYEE.emp_id=DEPARTMENT.dept_id AND DESIGNATION='Manager';
+
+no rows selected
+
+SQL> SELECT emp_id,emp_name,designation,dept_name FROM EMPLOYEE,DEPARTMENT WHERE EMPLOYEE.emp_id=DEPARTMENT.dept_id AND dept_name='IT';
+
+no rows selected
+
+SQL> CREATE TABLE DEPARTMENTCOPY(dept_id int PRIMARY KEY,dept_name varchar(12) NOT NULL,dept_function varchar(10),location_id int UNIQUE);
+
+Table created.
+
+SQL> INSERT INTO DEPARTMENTCOPY SELECT * FROM DEPARTMENT WHERE DEPT_ID IN(SELECT dept_id FROM DEPARTMENT);
+
+5 rows created.
+
+SQL> SELECT * FROM DEPARTMENTCOPY;
+
+   DEPT_ID DEPT_NAME    DEPT_FUNCT LOCATION_ID                                  
+---------- ------------ ---------- -----------                                  
+   1740201 Eater        Food                 1                                  
+   1740202 Service      Hospital             2                                  
+   1740203 Comp         Code                 3                                  
+   1740204 IT           Hack                 4                                  
+   1740205 Hospital     Manage               5                                  
+
+SQL> SELECT emp_name,designation FROM EMPLOYEE WHERE SALARY>(SELECT SALARY FROM EMPLOYEE WHERE emp_id='163');
+
+no rows selected
+
+SQL> spool off;

@@ -1,0 +1,211 @@
+SQL> CREATE TABLE CUSTOMER(Cust_Id int PRIMARY KEY,Cust_Name varchar(10),Cust_address varchar(10),Transaction_ID int UNIQUE,Transaction_date date NOT NULL,Purchase_amount int);
+
+Table created.
+
+SQL> DESC CUSTOMER;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CUST_ID                                   NOT NULL NUMBER(38)
+ CUST_NAME                                          VARCHAR2(10)
+ CUST_ADDRESS                                       VARCHAR2(10)
+ TRANSACTION_ID                                     NUMBER(38)
+ TRANSACTION_DATE                          NOT NULL DATE
+ PURCHASE_AMOUNT                                    NUMBER(38)
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 01
+Enter value for cust_name: Adarsh
+Enter value for cust_address: Whitefield
+Enter value for transaction_id: 1740201
+Enter value for transaction_date: 14/Feb/1999
+Enter value for purchase_amount: 30000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(01,'Adarsh','Whitefield',1740201,'14/Feb/1999',30000)
+
+1 row created.
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 02
+Enter value for cust_name: Tony
+Enter value for cust_address: Hosur
+Enter value for transaction_id: 1740202
+Enter value for transaction_date: 26/Jul/2003
+Enter value for purchase_amount: 18000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(02,'Tony','Hosur',1740202,'26/Jul/2003',18000)
+
+1 row created.
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 03
+Enter value for cust_name: Ashbin
+Enter value for cust_address: Banaswadi
+Enter value for transaction_id: 1740203
+Enter value for transaction_date: 31/Dec/2008
+Enter value for purchase_amount: 10000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(03,'Ashbin','Banaswadi',1740203,'31/Dec/2008',10000)
+
+1 row created.
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 04
+Enter value for cust_name: Chaitanya
+Enter value for cust_address: Airport
+Enter value for transaction_id: 1740204
+Enter value for transaction_date: 22/May/1998
+Enter value for purchase_amount: 16000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(04,'Chaitanya','Airport',1740204,'22/May/1998',16000)
+
+1 row created.
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 05
+Enter value for cust_name: Prithul
+Enter value for cust_address: Taverkare
+Enter value for transaction_id: 1740205
+Enter value for transaction_date: 09/Jan/2007
+Enter value for purchase_amount: 20000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(05,'Prithul','Taverkare',1740205,'09/Jan/2007',20000)
+
+1 row created.
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 06
+Enter value for cust_name: Venkat
+Enter value for cust_address: Kalpalli
+Enter value for transaction_id: 1740206
+Enter value for transaction_date: 30/Dec/1994
+Enter value for purchase_amount: 24000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(06,'Venkat','Kalpalli',1740206,'30/Dec/1994',24000)
+
+1 row created.
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 07
+Enter value for cust_name: Dhairya
+Enter value for cust_address: Jaipur
+Enter value for transaction_id: 1740207
+Enter value for transaction_date: 22/Dec/2001
+Enter value for purchase_amount: 50000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(07,'Dhairya','Jaipur',1740207,'22/Dec/2001',50000)
+
+1 row created.
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 
+Enter value for cust_name: Gautam
+Enter value for cust_address: Delhi
+Enter value for transaction_id: 1740201
+Enter value for transaction_date: 
+Enter value for purchase_amount: 14000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(,'Gautam','Delhi',1740201,'',14000)
+INSERT INTO CUSTOMER VALUES(,'Gautam','Delhi',1740201,'',14000)
+                            *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: NULL
+Enter value for cust_name: Parth
+Enter value for cust_address: Kerala
+Enter value for transaction_id: 1740204
+Enter value for transaction_date: 
+Enter value for purchase_amount: 
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(NULL,'Parth','Kerala',1740204,'',)
+INSERT INTO CUSTOMER VALUES(NULL,'Parth','Kerala',1740204,'',)
+                                                             *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> 
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: NULL
+Enter value for cust_name: Parth
+Enter value for cust_address: Kerala
+Enter value for transaction_id: 1740204
+Enter value for transaction_date: 06/Nov/2001
+Enter value for purchase_amount: 15000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(NULL,'Parth','Kerala',1740204,'06/Nov/2001',15000)
+INSERT INTO CUSTOMER VALUES(NULL,'Parth','Kerala',1740204,'06/Nov/2001',15000)
+                            *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SYSTEM"."CUSTOMER"."CUST_ID") 
+
+
+SQL> INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount);
+Enter value for cust_id: 08
+Enter value for cust_name: Jerin
+Enter value for cust_address: TVM
+Enter value for transaction_id: 1740204
+Enter value for transaction_date: 29/Jan/2002
+Enter value for purchase_amount: 3000
+old   1: INSERT INTO CUSTOMER VALUES(&Cust_Id,'&Cust_Name','&Cust_address',&Transaction_Id,'&Transaction_date',&Purchase_amount)
+new   1: INSERT INTO CUSTOMER VALUES(08,'Jerin','TVM',1740204,'29/Jan/2002',3000)
+INSERT INTO CUSTOMER VALUES(08,'Jerin','TVM',1740204,'29/Jan/2002',3000)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.SYS_C007114) violated 
+
+
+SQL> CREATE TABLE TRANSACTION(Cust_id int,Bank varchar(10),Location varchar(10),Amount int CHECK(Amount>0),Trans_date date,FOREIGN KEY (Cust_id) REFERENCES CUSTOMER(Cust_id));
+
+Table created.
+
+SQL> INSERT INTO TRANSACTION VALUES(&Cust_id,'&Bank','&Location',&Amount,'&Trans_date');
+Enter value for cust_id: 01
+Enter value for bank: SBI
+Enter value for location: Indranagar
+Enter value for amount: 0
+Enter value for trans_date: 22/Mar/1995
+old   1: INSERT INTO TRANSACTION VALUES(&Cust_id,'&Bank','&Location',&Amount,'&Trans_date')
+new   1: INSERT INTO TRANSACTION VALUES(01,'SBI','Indranagar',0,'22/Mar/1995')
+INSERT INTO TRANSACTION VALUES(01,'SBI','Indranagar',0,'22/Mar/1995')
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.SYS_C007115) violated 
+
+
+SQL> INSERT INTO TRANSACTION VALUES(&Cust_id,'&Bank','&Location',&Amount,'&Trans_date');
+Enter value for cust_id: 01
+Enter value for bank: SBI
+Enter value for location: Indranagar
+Enter value for amount: 10000
+Enter value for trans_date: 22/Mar/1995
+old   1: INSERT INTO TRANSACTION VALUES(&Cust_id,'&Bank','&Location',&Amount,'&Trans_date')
+new   1: INSERT INTO TRANSACTION VALUES(01,'SBI','Indranagar',10000,'22/Mar/1995')
+
+1 row created.
+
+SQL> INSERT INTO TRANSACTION VALUES(&Cust_id,'&Bank','&Location',&Amount,'&Trans_date');
+Enter value for cust_id: 02
+Enter value for bank: PunjabNat
+Enter value for location: Punjab
+Enter value for amount: 14000
+Enter value for trans_date: 21/Jan/2008
+old   1: INSERT INTO TRANSACTION VALUES(&Cust_id,'&Bank','&Location',&Amount,'&Trans_date')
+new   1: INSERT INTO TRANSACTION VALUES(02,'PunjabNat','Punjab',14000,'21/Jan/2008')
+
+1 row created.
+
+SQL> INSERT INTO TRANSACTION VALUES(&Cust_id,'&Bank','&Location',&Amount,'&Trans_date');
+Enter value for cust_id: 03
+Enter value for bank: SouthInd
+Enter value for location: Karnataka
+Enter value for amount: 19000
+Enter value for trans_date: 28/Feb/2003
+old   1: INSERT INTO TRANSACTION VALUES(&Cust_id,'&Bank','&Location',&Amount,'&Trans_date')
+new   1: INSERT INTO TRANSACTION VALUES(03,'SouthInd','Karnataka',19000,'28/Feb/2003')
+
+1 row created.
+
+SQL> spool off;

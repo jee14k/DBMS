@@ -1,0 +1,274 @@
+SQL> CREATE TABLE STUDENT(Roll_no int,Name varchar(10),Class varchar(5),Marks int,Grade char,Fees int);
+CREATE TABLE STUDENT(Roll_no int,Name varchar(10),Class varchar(5),Marks int,Grade char,Fees int)
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> CREATE TABLE STUDENT(Roll_no int,Name varchar(10),Class varchar(5),Marks int,Grade char(10),Fees int);
+CREATE TABLE STUDENT(Roll_no int,Name varchar(10),Class varchar(5),Marks int,Grade char(10),Fees int)
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> CREATE TABLE STUDENT(Roll_no int,Name varchar(10),Class varchar(5),Marks int,Grade varchar(10),Fees int);
+CREATE TABLE STUDENT(Roll_no int,Name varchar(10),Class varchar(5),Marks int,Grade varchar(10),Fees int)
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> DROP TABLE STUDENT;
+
+Table dropped.
+
+SQL> CREATE TABLE STUDENT(Roll_no int,Name varchar(10),Class varchar(5),Marks int,Grade varchar(10),Fees int);
+
+Table created.
+
+SQL> DESC STUDENT;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLL_NO                                            NUMBER(38)
+ NAME                                               VARCHAR2(10)
+ CLASS                                              VARCHAR2(5)
+ MARKS                                              NUMBER(38)
+ GRADE                                              VARCHAR2(10)
+ FEES                                               NUMBER(38)
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 001
+Enter value for name: Yash
+Enter value for class: CMS
+Enter value for marks: 66
+Enter value for grade: C
+Enter value for fees: 40500
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(001,'Yash','CMS',66,'C',40500)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 002
+Enter value for name: Yana
+Enter value for class: BCOM
+Enter value for marks: 98
+Enter value for grade: A
+Enter value for fees: 20000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(002,'Yana','BCOM',98,'A',20000)
+
+1 row created.
+
+SQL> 
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 003
+Enter value for name: Snigdha
+Enter value for class: BCA
+Enter value for marks: 86
+Enter value for grade: B
+Enter value for fees: 40700
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(003,'Snigdha','BCA',86,'B',40700)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: Ankur
+Enter value for name: 
+Enter value for class: 
+Enter value for marks: 
+Enter value for grade: 
+Enter value for fees: 
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(Ankur,'','',,'',)
+INSERT INTO STUDENT VALUES(Ankur,'','',,'',)
+                                       *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> 
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 003
+Enter value for name: Ankur
+Enter value for class: Bsc
+Enter value for marks: 68
+Enter value for grade: D
+Enter value for fees: 76000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(003,'Ankur','Bsc',68,'D',76000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 004
+Enter value for name: Rahul
+Enter value for class: BBA
+Enter value for marks: 46
+Enter value for grade: E
+Enter value for fees: 97000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(004,'Rahul','BBA',46,'E',97000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 005
+Enter value for name: Yiyasu
+Enter value for class: BBM
+Enter value for marks: 74
+Enter value for grade: C
+Enter value for fees: 76000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(005,'Yiyasu','BBM',74,'C',76000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 006
+Enter value for name: Abhay
+Enter value for class: CMS
+Enter value for marks: 79
+Enter value for grade: C
+Enter value for fees: 44000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(006,'Abhay','CMS',79,'C',44000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 007
+Enter value for name: Prithul
+Enter value for class: BBA
+Enter value for marks: 59
+Enter value for grade: D
+Enter value for fees: 86000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(007,'Prithul','BBA',59,'D',86000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 008
+Enter value for name: Shornabho
+Enter value for class: BBM
+Enter value for marks: 55
+Enter value for grade: E
+Enter value for fees: 89000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(008,'Shornabho','BBM',55,'E',89000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 009
+Enter value for name: Karthik
+Enter value for class: BCA
+Enter value for marks: 79
+Enter value for grade: C
+Enter value for fees: 55000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(009,'Karthik','BCA',79,'C',55000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES);
+Enter value for roll_no: 010
+Enter value for name: Bharath
+Enter value for class: Bsc
+Enter value for marks: 88
+Enter value for grade: B
+Enter value for fees: 82000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO,'&NAME','&CLASS',&MARKS,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(010,'Bharath','Bsc',88,'B',82000)
+
+1 row created.
+
+SQL> SELECT MARKS FROM STUDENT ORDER BY MARKS DESC;
+
+     MARKS                                                                      
+----------                                                                      
+        98                                                                      
+        88                                                                      
+        86                                                                      
+        79                                                                      
+        79                                                                      
+        74                                                                      
+        68                                                                      
+        66                                                                      
+        59                                                                      
+        55                                                                      
+        46                                                                      
+
+11 rows selected.
+
+SQL> SELECT MARKS FROM STUDENT ORDER BY MARKS ASC;
+
+     MARKS                                                                      
+----------                                                                      
+        46                                                                      
+        55                                                                      
+        59                                                                      
+        66                                                                      
+        68                                                                      
+        74                                                                      
+        79                                                                      
+        79                                                                      
+        86                                                                      
+        88                                                                      
+        98                                                                      
+
+11 rows selected.
+
+SQL> SELECT AVG(MARKS) FROM STUDENT;
+
+AVG(MARKS)                                                                      
+----------                                                                      
+72.5454545                                                                      
+
+SQL> SELECT ROLL_NO,NAME,GRADE ORDER BY FEES ASC;
+SELECT ROLL_NO,NAME,GRADE ORDER BY FEES ASC
+                          *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT ROLL_NO,NAME,GRADE FROM STUDENT ORDER BY FEES ASC;
+
+   ROLL_NO NAME       GRADE                                                     
+---------- ---------- ----------                                                
+         2 Yana       A                                                         
+         1 Yash       C                                                         
+         3 Snigdha    B                                                         
+         6 Abhay      C                                                         
+         9 Karthik    C                                                         
+         3 Ankur      D                                                         
+         5 Yiyasu     C                                                         
+        10 Bharath    B                                                         
+         7 Prithul    D                                                         
+         8 Shornabho  E                                                         
+         4 Rahul      E                                                         
+
+11 rows selected.
+
+SQL> SELECT MAX(FEES) FROM STUDENT;
+
+ MAX(FEES)                                                                      
+----------                                                                      
+     97000                                                                      
+
+SQL> SELECT SUM(FEES) FROM STUDENT;
+
+ SUM(FEES)                                                                      
+----------                                                                      
+    706200                                                                      
+
+SQL> SELECT COUNT(*) FROM STUDENT;
+
+  COUNT(*)                                                                      
+----------                                                                      
+        11                                                                      
+
+SQL> spool off;

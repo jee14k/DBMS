@@ -1,0 +1,240 @@
+SQL> SELECT * FROM EMPLOYEE;
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740201 Adarsh          Day                10000.5 Cook                      
+Food                                                                            
+                                                                                
+   1740202 Tony            Night                15000 Clerk                     
+Administration                                                                  
+                                                                                
+   1740203 Chaitanya       Night              13500.5 Manager                   
+Administration                                                                  
+                                                                                
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740221 Aishwarya       Night                30500 Receptionist              
+Registration                                                                    
+                                                                                
+   1740224 Anushka         Day                  25000 Manager                   
+Human Resource                                                                  
+                                                                                
+   1740226 Bhairavi        Day                  40000 Singer                    
+Entertainment                                                                   
+                                                                                
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740246 Parth           Night              50000.5 Drummer                   
+Entertainment                                                                   
+                                                                                
+   1740247 Yash            Day                  20000 Councellor                
+Human Resource                                                                  
+                                                                                
+   1740255 Gautam          Day                  10000 Dealer                    
+Finance                                                                         
+                                                                                
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740256 Jeevan          Day                19000.8 Accountant                
+Finance                                                                         
+                                                                                
+
+10 rows selected.
+
+SQL> CREATE TABLE EMPLOYEE2(Empname varchar(10),EmpID int,dateofjoining date,salary int,department varchar(10),designation(10));
+CREATE TABLE EMPLOYEE2(Empname varchar(10),EmpID int,dateofjoining date,salary int,department varchar(10),designation(10))
+                                                                                                                     *
+ERROR at line 1:
+ORA-00902: invalid datatype 
+
+
+SQL> CREATE TABLE EMPLOYEE2(Empname varchar(10),EmpID int,dateofjoining date,salary int,department varchar(10),designation varchar(10));
+
+Table created.
+
+SQL> INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation');
+Enter value for empname: Adarsh
+Enter value for empid: 1740201\
+Enter value for dateofjoining: 01/Jan/1995
+Enter value for salary: 15000
+Enter value for department: Management
+Enter value for designation: Manager
+old   1: INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation')
+new   1: INSERT INTO EMPLOYEE2 VALUES('Adarsh',1740201\,'01/Jan/1995',15000,'Management','Manager')
+INSERT INTO EMPLOYEE2 VALUES('Adarsh',1740201\,'01/Jan/1995',15000,'Management','Manager')
+                                             *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation');
+Enter value for empname: Adarsh
+Enter value for empid: 1740201
+Enter value for dateofjoining: 01/Jan/1995
+Enter value for salary: 15000
+Enter value for department: Management
+Enter value for designation: Manager
+old   1: INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation')
+new   1: INSERT INTO EMPLOYEE2 VALUES('Adarsh',1740201,'01/Jan/1995',15000,'Management','Manager')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation');
+Enter value for empname: Tony
+Enter value for empid: 1740202
+Enter value for dateofjoining: 14/Feb/1999
+Enter value for salary: 87000
+Enter value for department: Hospital
+Enter value for designation: Waiter
+old   1: INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation')
+new   1: INSERT INTO EMPLOYEE2 VALUES('Tony',1740202,'14/Feb/1999',87000,'Hospital','Waiter')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation');
+Enter value for empname: Ashbin
+Enter value for empid: 1740203
+Enter value for dateofjoining: 14/Sep/1998
+Enter value for salary: 19000
+Enter value for department: Finance
+Enter value for designation: Cashier
+old   1: INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation')
+new   1: INSERT INTO EMPLOYEE2 VALUES('Ashbin',1740203,'14/Sep/1998',19000,'Finance','Cashier')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation');
+Enter value for empname: Chaitanya
+Enter value for empid: 1740204
+Enter value for dateofjoining: 31/Dec/2004
+Enter value for salary: 86000
+Enter value for department: Computer
+Enter value for designation: Coder
+old   1: INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation')
+new   1: INSERT INTO EMPLOYEE2 VALUES('Chaitanya',1740204,'31/Dec/2004',86000,'Computer','Coder')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation');
+Enter value for empname: Prithul
+Enter value for empid: 1740205
+Enter value for dateofjoining: 18/Jul/2006
+Enter value for salary: 27000
+Enter value for department: Statistics
+Enter value for designation: Scientist
+old   1: INSERT INTO EMPLOYEE2 VALUES('&Empname',&EmpID,'&dateofjoining',&salary,'&department','&designation')
+new   1: INSERT INTO EMPLOYEE2 VALUES('Prithul',1740205,'18/Jul/2006',27000,'Statistics','Scientist')
+
+1 row created.
+
+SQL> SELECT COUNT(*) EmpId FROM EMPLOYEE2 GROUP BY department;
+
+     EMPID                                                                      
+----------                                                                      
+         1                                                                      
+         1                                                                      
+         1                                                                      
+         1                                                                      
+         1                                                                      
+
+SQL> SELECT COUNT(*) FROM EMPLOYEE2 GROUP BY department;
+
+  COUNT(*)                                                                      
+----------                                                                      
+         1                                                                      
+         1                                                                      
+         1                                                                      
+         1                                                                      
+         1                                                                      
+
+SQL> SELECT COUNT(*),Department FROM EMPLOYEE2 GROUP BY department;
+
+  COUNT(*) DEPARTMENT                                                           
+---------- ----------                                                           
+         1 Management                                                           
+         1 Hospital                                                             
+         1 Finance                                                              
+         1 Computer                                                             
+         1 Statistics                                                           
+
+SQL> SELECT Department,Salary FROM EMPLOYEE2 GROUP BY Department HAVING Salary>30000;
+SELECT Department,Salary FROM EMPLOYEE2 GROUP BY Department HAVING Salary>30000
+                                                                   *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> SELECT Department,Salary FROM EMPLOYEE2  HAVING Salary>30000;
+SELECT Department,Salary FROM EMPLOYEE2  HAVING Salary>30000
+                                                *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> SELECT Department,Salary FROM EMPLOYEE2 GROUP BY salary HAVING Salary>30000;
+SELECT Department,Salary FROM EMPLOYEE2 GROUP BY salary HAVING Salary>30000
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> SELECT department,AVG(Salary) FROM EMPLOYEE2 GROUP BY department HAVING AVG(Salary)>30000;
+
+DEPARTMENT AVG(SALARY)                                                          
+---------- -----------                                                          
+Hospital         87000                                                          
+Computer         86000                                                          
+
+SQL> SELECT AVG(SALARY) FROM EMPLOYEE2 GROUP BY DEPARTMENT;
+
+AVG(SALARY)                                                                     
+-----------                                                                     
+      15000                                                                     
+      87000                                                                     
+      19000                                                                     
+      86000                                                                     
+      27000                                                                     
+
+SQL> SELECT department,AVG(SALARY) FROM EMPLOYEE2 GROUP BY department HAVING COUNT(DEPARTMENT) <3;
+
+DEPARTMENT AVG(SALARY)                                                          
+---------- -----------                                                          
+Management       15000                                                          
+Hospital         87000                                                          
+Finance          19000                                                          
+Computer         86000                                                          
+Statistics       27000                                                          
+
+SQL> SELECT COUNT(DEPARTMENT) FROM EMPLOYEE2 GROUP BY department HAVING COUNT(DEPARTMENT) >2;
+
+no rows selected
+
+SQL> SELECT MAX(SALARY),DEPARTMENT FROM EMPLOYEE2;
+SELECT MAX(SALARY),DEPARTMENT FROM EMPLOYEE2
+                   *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> SELECT MAX(SALARY) FROM EMPLOYEE2 GROUP BY DEPARTMENT;
+
+MAX(SALARY)                                                                     
+-----------                                                                     
+      15000                                                                     
+      87000                                                                     
+      19000                                                                     
+      86000                                                                     
+      27000                                                                     
+
+SQL> spool off;

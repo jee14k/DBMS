@@ -1,0 +1,298 @@
+SQL> CREATE TABLE EMPLOYEE(Eid int,Ename varchar(15),Eshift varchar(15),Esal float,Eposition varchar(15),Edept varchar(15));
+
+Table created.
+
+SQL> DESC EMPLOYEE;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                                NUMBER(38)
+ ENAME                                              VARCHAR2(15)
+ ESHIFT                                             VARCHAR2(15)
+ ESAL                                               FLOAT(126)
+ EPOSITION                                          VARCHAR2(15)
+ EDEPT                                              VARCHAR2(15)
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740201
+Enter value for ename: Adarsh
+Enter value for eshift: Day
+Enter value for esal: 10000.50
+Enter value for eposition: Cook
+Enter value for edept: Food
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740201,'Adarsh','Day',10000.50,'Cook','Food')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740202
+Enter value for ename: Tony
+Enter value for eshift: Night
+Enter value for esal: 15000.00
+Enter value for eposition: Clerk
+Enter value for edept: Administration
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740202,'Tony','Night',15000.00,'Clerk','Administration')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740203
+Enter value for ename: Chaitanya
+Enter value for eshift: Night
+Enter value for esal: 13500.50
+Enter value for eposition: Manager
+Enter value for edept: Administration
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740203,'Chaitanya','Night',13500.50,'Manager','Administration')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740221
+Enter value for ename: Aishwarya
+Enter value for eshift: Night
+Enter value for esal: 30500.00
+Enter value for eposition: Receptionist
+Enter value for edept: Registration
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740221,'Aishwarya','Night',30500.00,'Receptionist','Registration')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740224
+Enter value for ename: Anushka
+Enter value for eshift: Day
+Enter value for esal: 25000.00
+Enter value for eposition: Manager
+Enter value for edept: Human Resource
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740224,'Anushka','Day',25000.00,'Manager','Human Resource')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740226
+Enter value for ename: Bhairavi
+Enter value for eshift: Day
+Enter value for esal: 40000.00
+Enter value for eposition: Singer
+Enter value for edept: Entertainment
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740226,'Bhairavi','Day',40000.00,'Singer','Entertainment')
+
+1 row created.
+
+SQL> SELECT COUNT(*) FROM EMPLOYEE;
+
+  COUNT(*)                                                                      
+----------                                                                      
+         6                                                                      
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740246
+Enter value for ename: Parth
+Enter value for eshift: Night
+Enter value for esal: 50000.50
+Enter value for eposition: Drummer
+Enter value for edept: Entertainment
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740246,'Parth','Night',50000.50,'Drummer','Entertainment')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740247
+Enter value for ename: Yash
+Enter value for eshift: Day
+Enter value for esal: 20000.00
+Enter value for eposition: Councellor
+Enter value for edept: Human Resource
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740247,'Yash','Day',20000.00,'Councellor','Human Resource')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740255
+Enter value for ename: Gautam
+Enter value for eshift: Day
+Enter value for esal: 10000
+Enter value for eposition: Dealer
+Enter value for edept: Finance
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740255,'Gautam','Day',10000,'Dealer','Finance')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept');
+Enter value for eid: 1740256
+Enter value for ename: Jeevan
+Enter value for eshift: Day
+Enter value for esal: 19000.80
+Enter value for eposition: Accountant
+Enter value for edept: Finance
+old   1: INSERT INTO EMPLOYEE VALUES(&Eid,'&Ename','&Eshift',&Esal,'&Eposition','&Edept')
+new   1: INSERT INTO EMPLOYEE VALUES(1740256,'Jeevan','Day',19000.80,'Accountant','Finance')
+
+1 row created.
+
+SQL> SELECT COUNT(*) FROM EMPLOYEE;
+
+  COUNT(*)                                                                      
+----------                                                                      
+        10                                                                      
+
+SQL> SELECT NAME FROM EMPLOYEE WHERE ESHIFT = 'Night';
+SELECT NAME FROM EMPLOYEE WHERE ESHIFT = 'Night'
+       *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL> SELECT ENAME FROM EMPLOYEE WHERE ESHIFT = 'Night';
+
+ENAME                                                                           
+---------------                                                                 
+Tony                                                                            
+Chaitanya                                                                       
+Aishwarya                                                                       
+Parth                                                                           
+
+SQL> Select Ename from EMPLOYEE WHERE ESAL > 40000;
+
+ENAME                                                                           
+---------------                                                                 
+Parth                                                                           
+
+SQL> Select * from EMPLOYEE;
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740201 Adarsh          Day                10000.5 Cook                      
+Food                                                                            
+                                                                                
+   1740202 Tony            Night                15000 Clerk                     
+Administration                                                                  
+                                                                                
+   1740203 Chaitanya       Night              13500.5 Manager                   
+Administration                                                                  
+                                                                                
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740221 Aishwarya       Night                30500 Receptionist              
+Registration                                                                    
+                                                                                
+   1740224 Anushka         Day                  25000 Manager                   
+Human Resource                                                                  
+                                                                                
+   1740226 Bhairavi        Day                  40000 Singer                    
+Entertainment                                                                   
+                                                                                
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740246 Parth           Night              50000.5 Drummer                   
+Entertainment                                                                   
+                                                                                
+   1740247 Yash            Day                  20000 Councellor                
+Human Resource                                                                  
+                                                                                
+   1740255 Gautam          Day                  10000 Dealer                    
+Finance                                                                         
+                                                                                
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740256 Jeevan          Day                19000.8 Accountant                
+Finance                                                                         
+                                                                                
+
+10 rows selected.
+
+SQL> SELECT ENAME FROM EMPLOYEE WHERE ESAL BETWEEN 40000 AND 60000;
+
+ENAME                                                                           
+---------------                                                                 
+Bhairavi                                                                        
+Parth                                                                           
+
+SQL> SELECT * FROM EMPLOYEE WHERE EPOSITION = 'Manager';
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740203 Chaitanya       Night              13500.5 Manager                   
+Administration                                                                  
+                                                                                
+   1740224 Anushka         Day                  25000 Manager                   
+Human Resource                                                                  
+                                                                                
+
+SQL> SELECT Ename FROM EMPLOYEE WHERE Edept = 'Production' || 'Finance';
+
+no rows selected
+
+SQL> SELECT Ename FROM EMPLOYEE WHERE Edept = 'Production' OR Edept = 'Finance';
+
+ENAME                                                                           
+---------------                                                                 
+Gautam                                                                          
+Jeevan                                                                          
+
+SQL> Slect Eid,Ename from Employee where Edept = 'Marketing';
+SP2-0734: unknown command beginning "Slect Eid,..." - rest of line ignored.
+SQL> Select Eid,Ename from Employee where Edept = 'Marketing';
+
+no rows selected
+
+SQL> SELECT * FROM EMPLOYEE WHERE NAME LIKE 'A%';
+SELECT * FROM EMPLOYEE WHERE NAME LIKE 'A%'
+                             *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL> SELECT * FROM EMPLOYEE WHERE ENAME LIKE 'A%';
+
+       EID ENAME           ESHIFT                ESAL EPOSITION                 
+---------- --------------- --------------- ---------- ---------------           
+EDEPT                                                                           
+---------------                                                                 
+   1740201 Adarsh          Day                10000.5 Cook                      
+Food                                                                            
+                                                                                
+   1740221 Aishwarya       Night                30500 Receptionist              
+Registration                                                                    
+                                                                                
+   1740224 Anushka         Day                  25000 Manager                   
+Human Resource                                                                  
+                                                                                
+
+SQL> SELECT Ename from Employee where Edept != 'Marketing' And Edept != 'Finance';
+
+ENAME                                                                           
+---------------                                                                 
+Adarsh                                                                          
+Tony                                                                            
+Chaitanya                                                                       
+Aishwarya                                                                       
+Anushka                                                                         
+Bhairavi                                                                        
+Parth                                                                           
+Yash                                                                            
+
+8 rows selected.
+
+SQL> spool off;

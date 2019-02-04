@@ -1,0 +1,205 @@
+SQL> CREATE TABLE EMPLOYEE1(Eno int,Ename varchar(10),Desgn varchar(10),Dept varchar(10),Doj date);
+
+Table created.
+
+SQL> CREATE TABLE TAX(Tax_id int,Tax_year int,Emp_no int,Tax int,E_AnnualIncome int,E_Deductions int);
+
+Table created.
+
+SQL> INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj');
+Enter value for eno: 01
+Enter value for ename: Adarsh
+Enter value for desgn: Coder
+Enter value for dept: Computer
+Enter value for doj: 16/Jan/2005
+old   1: INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj')
+new   1: INSERT INTO EMPLOYEE1 VALUES(01,'Adarsh','Coder','Computer','16/Jan/2005')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj');
+Enter value for eno: 02
+Enter value for ename: Tony
+Enter value for desgn: Clerk
+Enter value for dept: Management
+Enter value for doj: 14/Feb/2014
+old   1: INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj')
+new   1: INSERT INTO EMPLOYEE1 VALUES(02,'Tony','Clerk','Management','14/Feb/2014')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj');
+Enter value for eno: 03
+Enter value for ename: Ashbin
+Enter value for desgn: Cleaner
+Enter value for dept: Management
+Enter value for doj: 09/Mar/2011
+old   1: INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj')
+new   1: INSERT INTO EMPLOYEE1 VALUES(03,'Ashbin','Cleaner','Management','09/Mar/2011')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj');
+Enter value for eno: 04
+Enter value for ename: Chaitanya
+Enter value for desgn: Developer
+Enter value for dept: Computer
+Enter value for doj: 22/May/2009
+old   1: INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj')
+new   1: INSERT INTO EMPLOYEE1 VALUES(04,'Chaitanya','Developer','Computer','22/May/2009')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj');
+Enter value for eno: 05
+Enter value for ename: Prithul
+Enter value for desgn: Analyst
+Enter value for dept: Science
+Enter value for doj: 07/Aug/2015
+old   1: INSERT INTO EMPLOYEE1 VALUES(&Eno,'&Ename','&Desgn','&Dept','&Doj')
+new   1: INSERT INTO EMPLOYEE1 VALUES(05,'Prithul','Analyst','Science','07/Aug/2015')
+
+1 row created.
+
+SQL> INSERT INTO TAX VALUES(&Tax_id,Tax_year,Emp_no,&Tax,&E_AnnualIncome,&E_Deductions);
+Enter value for tax_id: 01
+Enter value for tax: 
+Enter value for e_annualincome: 
+Enter value for e_deductions: 
+old   1: INSERT INTO TAX VALUES(&Tax_id,Tax_year,Emp_no,&Tax,&E_AnnualIncome,&E_Deductions)
+new   1: INSERT INTO TAX VALUES(01,Tax_year,Emp_no,,,)
+INSERT INTO TAX VALUES(01,Tax_year,Emp_no,,,)
+                                          *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> 
+SQL> INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions);
+Enter value for tax_id: 01
+Enter value for tax_year: 1998
+Enter value for emp_no: 1740201
+Enter value for tax: 10000
+Enter value for e_annualincome: 400000
+Enter value for e_deductions: 5000
+old   1: INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions)
+new   1: INSERT INTO TAX VALUES(01,1998,1740201,10000,400000,5000)
+
+1 row created.
+
+SQL> INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions);
+Enter value for tax_id: 02
+Enter value for tax_year: 1999
+Enter value for emp_no: 1740202
+Enter value for tax: 15000
+Enter value for e_annualincome: 900000
+Enter value for e_deductions: 8000
+old   1: INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions)
+new   1: INSERT INTO TAX VALUES(02,1999,1740202,15000,900000,8000)
+
+1 row created.
+
+SQL> INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions);
+Enter value for tax_id: 03
+Enter value for tax_year: 2000
+Enter value for emp_no: 1740203
+Enter value for tax: 8500
+Enter value for e_annualincome: 600000
+Enter value for e_deductions: 7000
+old   1: INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions)
+new   1: INSERT INTO TAX VALUES(03,2000,1740203,8500,600000,7000)
+
+1 row created.
+
+SQL> INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions);
+Enter value for tax_id: 04
+Enter value for tax_year: 2001
+Enter value for emp_no: 1740204
+Enter value for tax: 10000
+Enter value for e_annualincome: 400000
+Enter value for e_deductions: 900
+old   1: INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions)
+new   1: INSERT INTO TAX VALUES(04,2001,1740204,10000,400000,900)
+
+1 row created.
+
+SQL> 05
+SP2-0226: Invalid line number 
+SQL> INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions);
+Enter value for tax_id: 05
+Enter value for tax_year: 2002
+Enter value for emp_no: 1740205
+Enter value for tax: 2000
+Enter value for e_annualincome: 800700
+Enter value for e_deductions: 1600
+old   1: INSERT INTO TAX VALUES(&Tax_id,&Tax_year,&Emp_no,&Tax,&E_AnnualIncome,&E_Deductions)
+new   1: INSERT INTO TAX VALUES(05,2002,1740205,2000,800700,1600)
+
+1 row created.
+
+SQL> SELECT SUM(E_DEDUCTIONS) FROM TAX;
+
+SUM(E_DEDUCTIONS)                                                               
+-----------------                                                               
+            22500                                                               
+
+SQL> SELECT NAME FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id AND E_AnnualIncome>200000;
+SELECT NAME FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id AND E_AnnualIncome>200000
+       *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL> SELECT ENAME FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id AND E_AnnualIncome>200000;
+
+ENAME                                                                           
+----------                                                                      
+Adarsh                                                                          
+Tony                                                                            
+Ashbin                                                                          
+Chaitanya                                                                       
+Prithul                                                                         
+
+SQL> SELECT ENAME FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id;
+
+ENAME                                                                           
+----------                                                                      
+Adarsh                                                                          
+Tony                                                                            
+Ashbin                                                                          
+Chaitanya                                                                       
+Prithul                                                                         
+
+SQL> SELECT DESGN FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id AND TAX>100000;
+
+no rows selected
+
+SQL> SELECT ENAME FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id AND E_Deductions>50000;
+
+no rows selected
+
+SQL> SELECT ENAME,TAX FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id AND desgn = 'Manager';
+
+no rows selected
+
+SQL> SELECT ENAME,TAX FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id AND desgn != 'Manager';
+
+ENAME             TAX                                                           
+---------- ----------                                                           
+Adarsh          10000                                                           
+Tony            15000                                                           
+Ashbin           8500                                                           
+Chaitanya       10000                                                           
+Prithul          2000                                                           
+
+SQL> SELECT ENAME,TAX,DESGN FROM TAX,EMPLOYEE1 WHERE EMPLOYEE1.Eno = TAX.Tax_id AND desgn != 'Manager';
+
+ENAME             TAX DESGN                                                     
+---------- ---------- ----------                                                
+Adarsh          10000 Coder                                                     
+Tony            15000 Clerk                                                     
+Ashbin           8500 Cleaner                                                   
+Chaitanya       10000 Developer                                                 
+Prithul          2000 Analyst                                                   
+
+SQL> spool off;

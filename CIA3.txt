@@ -1,0 +1,315 @@
+SQL> CREATE TABLE DEPT(DEPTNO int PRIMARY KEY,DNAME varchar(10) UNIQUE,LOC varchar(10));
+
+Table created.
+
+SQL> CREATE TABLE EMP(EMPNO int PRIMARY KEY,ENAME varchar(10) NOT NULL,SAL float CHECK(SAL<10000),COMM float,FOREIGN KEY (DEPTNO) REFERENCES DEPT (DEPTNO));
+CREATE TABLE EMP(EMPNO int PRIMARY KEY,ENAME varchar(10) NOT NULL,SAL float CHECK(SAL<10000),COMM float,FOREIGN KEY (DEPTNO) REFERENCES DEPT (DEPTNO))
+                                                                                                                     *
+SQL> CREATE TABLE EMP(EMPNO int PRIMARY KEY,ENAME varchar(10) NOT NULL,SAL float CHECK(SAL<10000),COMM float,DEPTNO int, FOREIGN KEY(DEPTNO) REFERENCES DEPT(DEPTNO));
+
+Table created.
+
+SQL> INSERT INTO DEPT VALUES(&DEPTNO,'&DNAME','&LOC');
+Enter value for deptno: 20
+Enter value for dname: Research
+Enter value for loc: Dallas
+old   1: INSERT INTO DEPT VALUES(&DEPTNO,'&DNAME','&LOC')
+new   1: INSERT INTO DEPT VALUES(20,'Research','Dallas')
+
+1 row created.
+
+SQL> INSERT INTO DEPT VALUES(&DEPTNO,'&DNAME','&LOC');
+Enter value for deptno: 30
+Enter value for dname: Sales
+Enter value for loc: Chicago
+old   1: INSERT INTO DEPT VALUES(&DEPTNO,'&DNAME','&LOC')
+new   1: INSERT INTO DEPT VALUES(30,'Sales','Chicago')
+
+1 row created.
+
+SQL> CREATE TABLE EMP(EMPNO int PRIMARY KEY,ENAME varchar(10) NOT NULL,EGENDER varchar(10),SAL float CHECK(SAL<10000),COMM float,DEPTNO int,FOREIGN KEY(DEPTNO) REFERENCES DEPT(DEPTNO));
+
+Table created.
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 6666
+Enter value for ename: Mulder
+Enter value for sal: 5500.00
+Enter value for comm: NULL
+Enter value for deptno: 20
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(6666,'Mulder','EGENDER',5500.00,NULL,20)
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 6666
+Enter value for ename: Mulder
+Enter value for egender: Male
+Enter value for sal: 5500.00
+Enter value for comm: NULL
+Enter value for deptno: 20
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(6666,'Mulder','Male',5500.00,NULL,20)
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 7329
+Enter value for ename: Smith
+Enter value for egender: Male
+Enter value for sal: 9000.00
+Enter value for comm: NULL
+Enter value for deptno: 20
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(7329,'Smith','Male',9000.00,NULL,20)
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 7499
+Enter value for ename: Allen
+Enter value for egender: Male
+Enter value for sal: 7500.00
+Enter value for comm: 100.00
+Enter value for deptno: 30
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(7499,'Allen','Male',7500.00,100.00,30)
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 7521
+Enter value for ename: Ward
+Enter value for egender: Male
+Enter value for sal: 5000.00
+Enter value for comm: 200.00
+Enter value for deptno: 30
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(7521,'Ward','Male',5000.00,200.00,30)
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 7566
+Enter value for ename: Jones
+Enter value for egender: Male
+Enter value for sal: 2975.00
+Enter value for comm: 400.00
+Enter value for deptno: 30
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(7566,'Jones','Male',2975.00,400.00,30)
+
+1 row created.
+
+SQL> SELECT * FROM DEPT;
+
+    DEPTNO DNAME      LOC                                                       
+---------- ---------- ----------                                                
+        20 Research   Dallas                                                    
+        30 Sales      Chicago                                                   
+
+SQL> SELECT * FROM EMP;
+
+     EMPNO ENAME      EGENDER           SAL       COMM     DEPTNO               
+---------- ---------- ---------- ---------- ---------- ----------               
+      6666 Mulder     Male             5500                    20               
+      7329 Smith      Male             9000                    20               
+      7499 Allen      Male             7500        100         30               
+      7521 Ward       Male             5000        200         30               
+      7566 Jones      Male             2975        400         30               
+
+SQL> CREATE TABLE COURSE(course_id int PRIMARY KEY,course_name varchar(10),stud_id int,marks int);
+
+Table created.
+
+SQL> INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks);
+Enter value for course_id: 01
+Enter value for course_name: Maths
+Enter value for stud_id: 1740201
+Enter value for marks: 98
+old   1: INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks)
+new   1: INSERT INTO COURSE VALUES(01,'Maths',1740201,98)
+
+1 row created.
+
+SQL> INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks);
+Enter value for course_id: 02
+Enter value for course_name: Stats
+Enter value for stud_id: 1740202
+Enter value for marks: 70
+old   1: INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks)
+new   1: INSERT INTO COURSE VALUES(02,'Stats',1740202,70)
+
+1 row created.
+
+SQL> INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks);
+Enter value for course_id: 03
+Enter value for course_name: Comp
+Enter value for stud_id: 1740203
+Enter value for marks: 88
+old   1: INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks)
+new   1: INSERT INTO COURSE VALUES(03,'Comp',1740203,88)
+
+1 row created.
+
+SQL> INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks);
+Enter value for course_id: 04
+Enter value for course_name: English
+Enter value for stud_id: 1740204
+Enter value for marks: 79
+old   1: INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks)
+new   1: INSERT INTO COURSE VALUES(04,'English',1740204,79)
+
+1 row created.
+
+SQL> INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks);
+Enter value for course_id: 05
+Enter value for course_name: Hindi
+Enter value for stud_id: 1740205
+Enter value for marks: 87
+old   1: INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks)
+new   1: INSERT INTO COURSE VALUES(05,'Hindi',1740205,87)
+
+1 row created.
+
+SQL> INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks);
+Enter value for course_id: 06
+Enter value for course_name: Movie
+Enter value for stud_id: 1740206
+Enter value for marks: 84
+old   1: INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks)
+new   1: INSERT INTO COURSE VALUES(06,'Movie',1740206,84)
+
+1 row created.
+
+SQL> INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks);
+Enter value for course_id: 07
+Enter value for course_name: Acting
+Enter value for stud_id: 1740207
+Enter value for marks: 85
+old   1: INSERT INTO COURSE VALUES(&course_id,'&course_name',&stud_id,&marks)
+new   1: INSERT INTO COURSE VALUES(07,'Acting',1740207,85)
+
+1 row created.
+
+SQL> SELECT * FROM COURSE;
+
+ COURSE_ID COURSE_NAM    STUD_ID      MARKS                                     
+---------- ---------- ---------- ----------                                     
+         1 Maths         1740201         98                                     
+         2 Stats         1740202         70                                     
+         3 Comp          1740203         88                                     
+         4 English       1740204         79                                     
+         5 Hindi         1740205         87                                     
+         6 Movie         1740206         84                                     
+         7 Acting        1740207         85                                     
+
+7 rows selected.
+
+SQL> SELECT course_name,AVG(marks) FROM COURSE group by course_name;
+
+COURSE_NAM AVG(MARKS)                                                           
+---------- ----------                                                           
+Stats              70                                                           
+Maths              98                                                           
+Comp               88                                                           
+English            79                                                           
+Acting             85                                                           
+Hindi              87                                                           
+Movie              84                                                           
+
+7 rows selected.
+
+SQL> SELECT AVG(marks),course_name FROM COURSE GROUP BY course_name HAVING AVG(marks)>60;
+
+AVG(MARKS) COURSE_NAM                                                           
+---------- ----------                                                           
+        70 Stats                                                                
+        98 Maths                                                                
+        88 Comp                                                                 
+        79 English                                                              
+        85 Acting                                                               
+        87 Hindi                                                                
+        84 Movie                                                                
+
+7 rows selected.
+
+SQL> SELECT COUNT(course_id),COURSE_name FROM COURSE GROUP BY course_name;
+
+COUNT(COURSE_ID) COURSE_NAM                                                     
+---------------- ----------                                                     
+               1 Stats                                                          
+               1 Maths                                                          
+               1 Comp                                                           
+               1 English                                                        
+               1 Acting                                                         
+               1 Hindi                                                          
+               1 Movie                                                          
+
+7 rows selected.
+
+SQL> SELECT * FROM EMP;
+
+     EMPNO ENAME      EGENDER           SAL       COMM     DEPTNO               
+---------- ---------- ---------- ---------- ---------- ----------               
+      6666 Mulder     Male             5500                    20               
+      7329 Smith      Male             9000                    20               
+      7499 Allen      Male             7500        100         30               
+      7521 Ward       Male             5000        200         30               
+      7566 Jones      Male             2975        400         30               
+
+SQL> SELECT * FROM DEPT;
+
+    DEPTNO DNAME      LOC                                                       
+---------- ---------- ----------                                                
+        20 Research   Dallas                                                    
+        30 Sales      Chicago                                                   
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 6666
+Enter value for ename: Reba
+Enter value for egender: Female
+Enter value for sal: 1000
+Enter value for comm: 300
+Enter value for deptno: 40
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(6666,'Reba','Female',1000,300,40)
+INSERT INTO EMP VALUES(6666,'Reba','Female',1000,300,40)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.SYS_C007230) violated 
+
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 7777
+Enter value for ename: NULL
+Enter value for egender: Female
+Enter value for sal: 999
+Enter value for comm: NULL
+Enter value for deptno: 10
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(7777,'NULL','Female',999,NULL,10)
+INSERT INTO EMP VALUES(7777,'NULL','Female',999,NULL,10)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYSTEM.SYS_C007231) violated - parent key not 
+found 
+
+
+SQL> INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO);
+Enter value for empno: 8888
+Enter value for ename: Okay
+Enter value for egender: Other
+Enter value for sal: 10001
+Enter value for comm: 70
+Enter value for deptno: 20
+old   1: INSERT INTO EMP VALUES(&EMPNO,'&ENAME','&EGENDER',&SAL,&COMM,&DEPTNO)
+new   1: INSERT INTO EMP VALUES(8888,'Okay','Other',10001,70,20)
+INSERT INTO EMP VALUES(8888,'Okay','Other',10001,70,20)
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.SYS_C007229) violated 
+
+
+SQL> spool off;

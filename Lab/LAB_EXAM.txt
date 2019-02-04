@@ -1,0 +1,451 @@
+SQL> CREATE TABLE STUDENT(ROLLNO int,NAME varchar(15),CLASS varchar(10),MARK int,GRADE char,FEES int))
+  2  
+SQL> 
+SQL> CREATE TABLE STUDENT(ROLLNO int,NAME varchar(15),CLASS varchar(10),MARK int,GRADE char,FEES int));
+CREATE TABLE STUDENT(ROLLNO int,NAME varchar(15),CLASS varchar(10),MARK int,GRADE char,FEES int))
+                                                                                                *
+ERROR at line 1:
+ORA-00922: missing or invalid option 
+
+
+SQL> CREATE TABLE STUDENT(ROLLNO int,NAME varchar(15),CLASS varchar(10),MARK int,GRADE char,FEES int);
+CREATE TABLE STUDENT(ROLLNO int,NAME varchar(15),CLASS varchar(10),MARK int,GRADE char,FEES int)
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> DROP TABLE STUDENT;
+
+Table dropped.
+
+SQL> CREATE TABLE STUDENT(ROLLNO int,NAME varchar(15),CLASS varchar(10),MARK int,GRADE char,FEES int);
+
+Table created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415901
+Enter value for name: Abdel
+Enter value for class: BCA
+Enter value for mark: 75
+Enter value for grade: B
+Enter value for fees: 40000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415901,'Abdel','BCA',75,'B',40000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415902
+Enter value for name: Aakash
+Enter value for class: BSC
+Enter value for mark: 85
+Enter value for grade: A
+Enter value for fees: 50000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415902,'Aakash','BSC',85,'A',50000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415903
+Enter value for name: Alfred
+Enter value for class: BBA
+Enter value for mark: 95
+Enter value for grade: A
+Enter value for fees: 70000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415903,'Alfred','BBA',95,'A',70000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415904
+Enter value for name: Anshul
+Enter value for class: BCOM
+Enter value for mark: 56
+Enter value for grade: C
+Enter value for fees: 60000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415904,'Anshul','BCOM',56,'C',60000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415905
+Enter value for name: Arjun
+Enter value for class: BCA
+Enter value for mark: 90
+Enter value for grade: A
+Enter value for fees: 50000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415905,'Arjun','BCA',90,'A',50000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415906
+Enter value for name: Aravind
+Enter value for class: BCA
+Enter value for mark: 59
+Enter value for grade: C
+Enter value for fees: 60000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415906,'Aravind','BCA',59,'C',60000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415906
+Enter value for name: Febin
+Enter value for class: BSC
+Enter value for mark: 20
+Enter value for grade: O
+Enter value for fees: 50000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415906,'Febin','BSC',20,'O',50000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415907
+Enter value for name: Dinu
+Enter value for class: BBA
+Enter value for mark: 60
+Enter value for grade: C
+Enter value for fees: 70000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415907,'Dinu','BBA',60,'C',70000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415908
+Enter value for name: Irene
+Enter value for class: BCOM
+Enter value for mark: 60
+Enter value for grade: C
+Enter value for fees: 70000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415908,'Irene','BCOM',60,'C',70000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415909
+Enter value for name: Nikhil
+Enter value for class: BBM
+Enter value for mark: 74
+Enter value for grade: B
+Enter value for fees: 60000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415909,'Nikhil','BBM',74,'B',60000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1415910
+Enter value for name: Jeevan
+Enter value for class: BSC
+Enter value for mark: 88
+Enter value for grade: B
+Enter value for fees: 80000
+old   1: INSERT INTO STUDENT VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO STUDENT VALUES(1415910,'Jeevan','BSC',88,'B',80000)
+
+1 row created.
+
+SQL> DELETE ROW FROM STUDENT WHERE NAME="Jeevan"
+  2  DELETE ROW FROM STUDENT WHERE NAME="Jeevan";
+DELETE ROW FROM STUDENT WHERE NAME="Jeevan"
+       *
+ERROR at line 1:
+ORA-00903: invalid table name 
+
+
+SQL> DELETE ROW FROM STUDENT WHERE NAME="Jeevan";
+DELETE ROW FROM STUDENT WHERE NAME="Jeevan"
+       *
+ERROR at line 1:
+ORA-00903: invalid table name 
+
+
+SQL> SELECT COUNT(*) FROM STUDENT WHERE MARK>60;
+
+  COUNT(*)                                                                      
+----------                                                                      
+         6                                                                      
+
+SQL> SELECT * FROM STUDENT WHERE CLASS = 'BCA' AND FEES>50000;
+
+    ROLLNO NAME            CLASS            MARK G       FEES                   
+---------- --------------- ---------- ---------- - ----------                   
+   1415906 Aravind         BCA                59 C      60000                   
+
+SQL> SELECT * FROM STUDENT WHERE CLASS!='BBA' OR CLASS!='BCA';
+
+    ROLLNO NAME            CLASS            MARK G       FEES                   
+---------- --------------- ---------- ---------- - ----------                   
+   1415901 Abdel           BCA                75 B      40000                   
+   1415902 Aakash          BSC                85 A      50000                   
+   1415903 Alfred          BBA                95 A      70000                   
+   1415904 Anshul          BCOM               56 C      60000                   
+   1415905 Arjun           BCA                90 A      50000                   
+   1415906 Aravind         BCA                59 C      60000                   
+   1415906 Febin           BSC                20 O      50000                   
+   1415907 Dinu            BBA                60 C      70000                   
+   1415908 Irene           BCOM               60 C      70000                   
+   1415909 Nikhil          BBM                74 B      60000                   
+   1415910 Jeevan          BSC                88 B      80000                   
+
+11 rows selected.
+
+SQL> DELETE FROM STUDENT WHERE NAME = 'Aravind';
+
+1 row deleted.
+
+SQL> SELECT * FROM STUDENT WHERE CLASS!='BBA' OR 'BSC';
+SELECT * FROM STUDENT WHERE CLASS!='BBA' OR 'BSC'
+                                                *
+ERROR at line 1:
+ORA-00920: invalid relational operator 
+
+
+SQL> SELECT * FROM STUDENT WHERE CLASS!='BBA' || CLASS!='BSC';
+SELECT * FROM STUDENT WHERE CLASS!='BBA' || CLASS!='BSC'
+                                                 *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> SELECT * FROM STUDENT WHERE CLASS!='BBA' | CLASS!='BSC';
+SELECT * FROM STUDENT WHERE CLASS!='BBA' | CLASS!='BSC'
+                                         *
+ERROR at line 1:
+ORA-00996: the concatenate operator is ||, not | 
+
+
+SQL> SELECT * FROM STUDENT WHERE CLASS!='BBA' || CLASS!='BSC';
+SELECT * FROM STUDENT WHERE CLASS!='BBA' || CLASS!='BSC'
+                                                 *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> SELECT NAME FROM STUDENT WHERE NAME LIKE 'A%' ORDER BY DESC;
+SELECT NAME FROM STUDENT WHERE NAME LIKE 'A%' ORDER BY DESC
+                                                       *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> SELECT NAME FROM STUDENT WHERE NAME LIKE 'A%' ORDERBY DESC;
+SELECT NAME FROM STUDENT WHERE NAME LIKE 'A%' ORDERBY DESC
+                                              *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> SELECT NAME FROM STUDENT WHERE NAME LIKE 'A%' ORDER BY DESC;
+SELECT NAME FROM STUDENT WHERE NAME LIKE 'A%' ORDER BY DESC
+                                                       *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> SELECT sysdate FROM STUDENT;
+
+SYSDATE                                                                         
+---------                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+
+10 rows selected.
+
+SQL> SELECT sysdate;
+SELECT sysdate
+             *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT sysdate FROM STUDENT;
+
+SYSDATE                                                                         
+---------                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+12-JUL-18                                                                       
+
+10 rows selected.
+
+SQL> UPDATE TABLE STUDENT ADD(DateofJoining date);
+UPDATE TABLE STUDENT ADD(DateofJoining date)
+       *
+ERROR at line 1:
+ORA-00903: invalid table name 
+
+
+SQL> UPDATE STUDENT ADD(DateofJoining date);
+UPDATE STUDENT ADD(DateofJoining date)
+               *
+ERROR at line 1:
+ORA-00971: missing SET keyword 
+
+
+SQL> UPDATE STUDENT ADD DateofJoining date;
+UPDATE STUDENT ADD DateofJoining date
+               *
+ERROR at line 1:
+ORA-00971: missing SET keyword 
+
+
+SQL> UPDATE STUDENT SET DateofJoining date;
+UPDATE STUDENT SET DateofJoining date
+                                 *
+ERROR at line 1:
+ORA-00927: missing equal sign 
+
+
+SQL> ALTER TABLE STUDENT ADD(DateofJoining date);
+
+Table altered.
+
+SQL> CREATE TABLE INFO(ROLLNO int,NAME varchar(15),CLASS varchar(5),MARK int,GRADE char,FEES int);
+
+Table created.
+
+SQL> INSERT INTO INFO VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1740201
+Enter value for name: Adarsh
+Enter value for class: CMS
+Enter value for mark: 76
+Enter value for grade: C
+Enter value for fees: 80000
+old   1: INSERT INTO INFO VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO INFO VALUES(1740201,'Adarsh','CMS',76,'C',80000)
+
+1 row created.
+
+SQL> INSERT INTO INFO VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1740202
+Enter value for name: Tony
+Enter value for class: BCA
+Enter value for mark: 80
+Enter value for grade: B
+Enter value for fees: 76000
+old   1: INSERT INTO INFO VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO INFO VALUES(1740202,'Tony','BCA',80,'B',76000)
+
+1 row created.
+
+SQL> INSERT INTO INFO VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES);
+Enter value for rollno: 1740203
+Enter value for name: Ashbin
+Enter value for class: BCOM
+Enter value for mark: 98
+Enter value for grade: A
+Enter value for fees: 25000
+old   1: INSERT INTO INFO VALUES(&ROLLNO,'&NAME','&CLASS',&MARK,'&GRADE',&FEES)
+new   1: INSERT INTO INFO VALUES(1740203,'Ashbin','BCOM',98,'A',25000)
+
+1 row created.
+
+SQL> SELECT MARK FROM STUDENT UNION SELECT MARK FROM INFO;
+
+      MARK                                                                      
+----------                                                                      
+        20                                                                      
+        56                                                                      
+        60                                                                      
+        74                                                                      
+        75                                                                      
+        76                                                                      
+        80                                                                      
+        85                                                                      
+        88                                                                      
+        90                                                                      
+        95                                                                      
+
+      MARK                                                                      
+----------                                                                      
+        98                                                                      
+
+12 rows selected.
+
+SQL> SELECT NAME FROM STUDENT UNION SELECT NAME FROM INFO;
+
+NAME                                                                            
+---------------                                                                 
+Aakash                                                                          
+Abdel                                                                           
+Adarsh                                                                          
+Alfred                                                                          
+Anshul                                                                          
+Arjun                                                                           
+Ashbin                                                                          
+Dinu                                                                            
+Febin                                                                           
+Irene                                                                           
+Jeevan                                                                          
+
+NAME                                                                            
+---------------                                                                 
+Nikhil                                                                          
+Tony                                                                            
+
+13 rows selected.
+
+SQL> SELECT * FROM STUDENT WHERE CLASS!=BBA OR CLASS!=BCA;
+SELECT * FROM STUDENT WHERE CLASS!=BBA OR CLASS!=BCA
+                                                 *
+ERROR at line 1:
+ORA-00904: "BCA": invalid identifier 
+
+
+SQL> SELECT * FROM STUDENT WHERE CLASS NOT 'BBA' OR CLASS NOT 'BCA';
+SELECT * FROM STUDENT WHERE CLASS NOT 'BBA' OR CLASS NOT 'BCA'
+                                      *
+ERROR at line 1:
+ORA-00920: invalid relational operator 
+
+
+SQL> SELECT * FROM STUDENT WHERE CLASS !='BBA' AND CLASS !='BCA';
+
+    ROLLNO NAME            CLASS            MARK G       FEES DATEOFJOI         
+---------- --------------- ---------- ---------- - ---------- ---------         
+   1415902 Aakash          BSC                85 A      50000                   
+   1415904 Anshul          BCOM               56 C      60000                   
+   1415906 Febin           BSC                20 O      50000                   
+   1415908 Irene           BCOM               60 C      70000                   
+   1415909 Nikhil          BBM                74 B      60000                   
+   1415910 Jeevan          BSC                88 B      80000                   
+
+6 rows selected.
+
+SQL> SELECT NAME FROM STUDENT WHERE NAME LIKE 'A%' ORDER BY NAME DESC;
+
+NAME                                                                            
+---------------                                                                 
+Arjun                                                                           
+Anshul                                                                          
+Alfred                                                                          
+Abdel                                                                           
+Aakash                                                                          
+
+SQL> spool off;

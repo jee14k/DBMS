@@ -1,0 +1,357 @@
+SQL> CREATE TABLE ACCOUNTS(Accid int,AccNo int,AccName varchar(10),Branch varchar(15),Type varchar(10));
+
+Table created.
+
+SQL> CREATE TABLE LOAN(LoanNo int,LoanType varchar(10),Amt float,Interest float);
+
+Table created.
+
+SQL> INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type');
+Enter value for accid: 01
+Enter value for accno: 111
+Enter value for accname: Jeevan
+Enter value for branch: Indiranagar
+Enter value for type: Savings
+old   1: INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type')
+new   1: INSERT INTO ACCOUNTS VALUES(01,111,'Jeevan','Indiranagar','Savings')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type');
+Enter value for accid: 02
+Enter value for accno: 222
+Enter value for accname: Snigdha
+Enter value for branch: Koramangala
+Enter value for type: Balance
+old   1: INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type')
+new   1: INSERT INTO ACCOUNTS VALUES(02,222,'Snigdha','Koramangala','Balance')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type');
+Enter value for accid: 03
+Enter value for accno: 333
+Enter value for accname: Yana
+Enter value for branch: Byappanahali
+Enter value for type: Credit
+old   1: INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type')
+new   1: INSERT INTO ACCOUNTS VALUES(03,333,'Yana','Byappanahali','Credit')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type');
+Enter value for accid: 04
+Enter value for accno: 444
+Enter value for accname: Gautam
+Enter value for branch: Jeevanahalli
+Enter value for type: Income
+old   1: INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type')
+new   1: INSERT INTO ACCOUNTS VALUES(04,444,'Gautam','Jeevanahalli','Income')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type');
+Enter value for accid: 05
+Enter value for accno: 555
+Enter value for accname: Parth
+Enter value for branch: Banaswadi
+Enter value for type: Debit
+old   1: INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type')
+new   1: INSERT INTO ACCOUNTS VALUES(05,555,'Parth','Banaswadi','Debit')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type');
+Enter value for accid: 06
+Enter value for accno: 666
+Enter value for accname: Yash
+Enter value for branch: Sarjapur
+Enter value for type: Madiwala
+old   1: INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type')
+new   1: INSERT INTO ACCOUNTS VALUES(06,666,'Yash','Sarjapur','Madiwala')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type');
+Enter value for accid: 07
+Enter value for accno: 777
+Enter value for accname: Yiyasu
+Enter value for branch: Majestic
+Enter value for type: Savings
+old   1: INSERT INTO ACCOUNTS VALUES(&Accid,&AccNo,'&AccName','&Branch','&Type')
+new   1: INSERT INTO ACCOUNTS VALUES(07,777,'Yiyasu','Majestic','Savings')
+
+1 row created.
+
+SQL> DESC LOAN;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LOANNO                                             NUMBER(38)
+ LOANTYPE                                           VARCHAR2(10)
+ AMT                                                FLOAT(126)
+ INTEREST                                           FLOAT(126)
+
+SQL> INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest);
+Enter value for loanno: 1740201
+Enter value for loantype: Car
+Enter value for amt: 25000.40
+Enter value for interest: 10000
+old   1: INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest)
+new   1: INSERT INTO LOAN VALUES(1740201,'Car',25000.40,10000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest);
+Enter value for loanno: 1740202
+Enter value for loantype: Bike
+Enter value for amt: 30000.00
+Enter value for interest: 5000
+old   1: INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest)
+new   1: INSERT INTO LOAN VALUES(1740202,'Bike',30000.00,5000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest);
+Enter value for loanno: 1740203
+Enter value for loantype: House
+Enter value for amt: 10000
+Enter value for interest: 2400.80
+old   1: INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest)
+new   1: INSERT INTO LOAN VALUES(1740203,'House',10000,2400.80)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest);
+Enter value for loanno: 1740204
+Enter value for loantype: Fridge
+Enter value for amt: 5000
+Enter value for interest: 2000
+old   1: INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest)
+new   1: INSERT INTO LOAN VALUES(1740204,'Fridge',5000,2000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest);
+Enter value for loanno: 1740205
+Enter value for loantype: Education
+Enter value for amt: 100000
+Enter value for interest: 5000
+old   1: INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest)
+new   1: INSERT INTO LOAN VALUES(1740205,'Education',100000,5000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest);
+Enter value for loanno: 1740206
+Enter value for loantype: Travel
+Enter value for amt: 12000
+Enter value for interest: 8000
+old   1: INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest)
+new   1: INSERT INTO LOAN VALUES(1740206,'Travel',12000,8000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest);
+Enter value for loanno: 174207
+Enter value for loantype: Laptop
+Enter value for amt: 50000
+Enter value for interest: 10000
+old   1: INSERT INTO LOAN VALUES(&LoanNo,'&LoanType',&Amt,&Interest)
+new   1: INSERT INTO LOAN VALUES(174207,'Laptop',50000,10000)
+
+1 row created.
+
+SQL> SELECT * FROM LOAN;
+
+    LOANNO LOANTYPE          AMT   INTEREST                                     
+---------- ---------- ---------- ----------                                     
+   1740201 Car           25000.4      10000                                     
+   1740202 Bike            30000       5000                                     
+   1740203 House           10000     2400.8                                     
+   1740204 Fridge           5000       2000                                     
+   1740205 Education      100000       5000                                     
+   1740206 Travel          12000       8000                                     
+    174207 Laptop          50000      10000                                     
+
+7 rows selected.
+
+SQL> SELECT * FROM ACCOUNTS;
+
+     ACCID      ACCNO ACCNAME    BRANCH          TYPE                           
+---------- ---------- ---------- --------------- ----------                     
+         1        111 Jeevan     Indiranagar     Savings                        
+         2        222 Snigdha    Koramangala     Balance                        
+         3        333 Yana       Byappanahali    Credit                         
+         4        444 Gautam     Jeevanahalli    Income                         
+         5        555 Parth      Banaswadi       Debit                          
+         6        666 Yash       Sarjapur        Madiwala                       
+         7        777 Yiyasu     Majestic        Savings                        
+
+7 rows selected.
+
+SQL> SELECT * FROM LOAN WHERE LOANNO IN(SELECT LOANNO FROM LOAN WHERE AMT > 20000);
+
+    LOANNO LOANTYPE          AMT   INTEREST                                     
+---------- ---------- ---------- ----------                                     
+   1740201 Car           25000.4      10000                                     
+   1740202 Bike            30000       5000                                     
+   1740205 Education      100000       5000                                     
+    174207 Laptop          50000      10000                                     
+
+SQL> SELECT * FROM ACCOUNTS WHERE ACCNO NOT IN(SELECT ACCID FROM ACCOUNTS WHERE ACCNAME = 'Jeevan');
+
+     ACCID      ACCNO ACCNAME    BRANCH          TYPE                           
+---------- ---------- ---------- --------------- ----------                     
+         2        222 Snigdha    Koramangala     Balance                        
+         1        111 Jeevan     Indiranagar     Savings                        
+         5        555 Parth      Banaswadi       Debit                          
+         4        444 Gautam     Jeevanahalli    Income                         
+         6        666 Yash       Sarjapur        Madiwala                       
+         7        777 Yiyasu     Majestic        Savings                        
+         3        333 Yana       Byappanahali    Credit                         
+
+7 rows selected.
+
+SQL> SELECT * FROM ACCOUNTS WHERE ACCNO NOT IN(SELECT ACCID FROM ACCOUNTS WHERE ACCNAME != 'Jeevan');
+
+     ACCID      ACCNO ACCNAME    BRANCH          TYPE                           
+---------- ---------- ---------- --------------- ----------                     
+         2        222 Snigdha    Koramangala     Balance                        
+         1        111 Jeevan     Indiranagar     Savings                        
+         5        555 Parth      Banaswadi       Debit                          
+         4        444 Gautam     Jeevanahalli    Income                         
+         6        666 Yash       Sarjapur        Madiwala                       
+         7        777 Yiyasu     Majestic        Savings                        
+         3        333 Yana       Byappanahali    Credit                         
+
+7 rows selected.
+
+SQL> SELECT * FROM LOAN WHERE LOANNO NOT IN(SELECT LOANNO FROM LOAN WHERE Interest<8000);
+
+    LOANNO LOANTYPE          AMT   INTEREST                                     
+---------- ---------- ---------- ----------                                     
+   1740201 Car           25000.4      10000                                     
+    174207 Laptop          50000      10000                                     
+   1740206 Travel          12000       8000                                     
+
+SQL> SELECT * FROM LOAN;
+
+    LOANNO LOANTYPE          AMT   INTEREST                                     
+---------- ---------- ---------- ----------                                     
+   1740201 Car           25000.4      10000                                     
+   1740202 Bike            30000       5000                                     
+   1740203 House           10000     2400.8                                     
+   1740204 Fridge           5000       2000                                     
+   1740205 Education      100000       5000                                     
+   1740206 Travel          12000       8000                                     
+    174207 Laptop          50000      10000                                     
+
+7 rows selected.
+
+SQL> SELECT * FROM LOAN WHERE LOANNO NOT IN(SELECT LOANNO FROM LOAN WHERE LOANTYPE='CAR');
+
+    LOANNO LOANTYPE          AMT   INTEREST                                     
+---------- ---------- ---------- ----------                                     
+   1740201 Car           25000.4      10000                                     
+   1740202 Bike            30000       5000                                     
+   1740204 Fridge           5000       2000                                     
+    174207 Laptop          50000      10000                                     
+   1740203 House           10000     2400.8                                     
+   1740205 Education      100000       5000                                     
+   1740206 Travel          12000       8000                                     
+
+7 rows selected.
+
+SQL> SELECT * FROM LOAN WHERE LOANNO NOT IN(SELECT LOANNO FROM LOAN WHERE LOANTYPE!='CAR');
+
+no rows selected
+
+SQL> CREATE TABLE LOAN_NEW(LOANNO int,LOANTYPE varchar(10),AMT float,INTEREST float);
+
+Table created.
+
+SQL> INSERT INTO LOAN_NEW SELECT * FROM LOAN WHERE LOANNO IN(SELECT LOANNO FROM LOAN);
+
+7 rows created.
+
+SQL> SELECT * FROM LOAN_NEW;
+
+    LOANNO LOANTYPE          AMT   INTEREST                                     
+---------- ---------- ---------- ----------                                     
+   1740201 Car           25000.4      10000                                     
+   1740202 Bike            30000       5000                                     
+   1740203 House           10000     2400.8                                     
+   1740204 Fridge           5000       2000                                     
+   1740205 Education      100000       5000                                     
+   1740206 Travel          12000       8000                                     
+    174207 Laptop          50000      10000                                     
+
+7 rows selected.
+
+SQL> SELECT * FROM LOAN;
+
+    LOANNO LOANTYPE          AMT   INTEREST                                     
+---------- ---------- ---------- ----------                                     
+   1740201 Car           25000.4      10000                                     
+   1740202 Bike            30000       5000                                     
+   1740203 House           10000     2400.8                                     
+   1740204 Fridge           5000       2000                                     
+   1740205 Education      100000       5000                                     
+   1740206 Travel          12000       8000                                     
+    174207 Laptop          50000      10000                                     
+
+7 rows selected.
+
+SQL> UPDATE LOAN_NEW SET LOANTYPE='Taxi' WHERE LOANNO < (SELECT MIN(AMT) FROM LOAN);
+
+0 rows updated.
+
+SQL> UPDATE LOAN_NEW SET LOANTYPE='Taxi' WHERE LOANNO < (SELECT MAX(AMT) FROM LOAN);
+
+0 rows updated.
+
+SQL> UPDATE LOAN_NEW SET LOANTYPE='Taxi' WHERE LOANNO < (SELECT MAX(AMT) FROM LOAN_NEW);
+
+0 rows updated.
+
+SQL> UPDATE LOAN_NEW SET LOANTYPE='Taxi' WHERE LOANNO < (SELECT MIN(AMT) FROM LOAN_NEW);
+
+0 rows updated.
+
+SQL> UPDATE LOAN_NEW SET LOANTYPE='Taxi' WHERE AMT < (SELECT MAX(AMT) FROM LOAN_NEW);
+
+6 rows updated.
+
+SQL> SELECT * FROM LOAN_NEW;
+
+    LOANNO LOANTYPE          AMT   INTEREST                                     
+---------- ---------- ---------- ----------                                     
+   1740201 Taxi          25000.4      10000                                     
+   1740202 Taxi            30000       5000                                     
+   1740203 Taxi            10000     2400.8                                     
+   1740204 Taxi             5000       2000                                     
+   1740205 Education      100000       5000                                     
+   1740206 Taxi            12000       8000                                     
+    174207 Taxi            50000      10000                                     
+
+7 rows selected.
+
+SQL> UPDATE LOAN_NEW SET LOANTYPE='Taxi' WHERE AMT < (SELECT MIN(AMT) FROM LOAN_NEW);
+
+0 rows updated.
+
+SQL> spool off;
+
+
+SQL> SELECT * FROM ACCOUNTS WHERE ACCID NOT IN(SELECT ACCID FROM ACCOUNTS WHERE ACCNAME = 'Jeevan');
+
+     ACCID      ACCNO ACCNAME    BRANCH          TYPE
+---------- ---------- ---------- --------------- ----------
+         5        555 Parth      Banaswadi       Debit
+         3        333 Yana       Byappanahali    Credit
+         2        222 Snigdha    Koramangala     Balance
+         6        666 Yash       Sarjapur        Madiwala
+         7        777 Yiyasu     Majestic        Savings
+         4        444 Gautam     Jeevanahalli    Income
+
+6 rows selected.

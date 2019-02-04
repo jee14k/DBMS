@@ -1,0 +1,345 @@
+
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL> CREATE TABLE ACCOUNT(AccNo int,Name varchar(10),Branch varchar(15),Type varchar(10));
+
+Table created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 01
+Enter value for name: Adarsh
+Enter value for branch: Jalahalli
+Enter value for type: Debit
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(01,'Adarsh','Jalahalli','Debit')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 02
+Enter value for name: Tony
+Enter value for branch: Krishnarajapuram
+Enter value for type: Credit
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(02,'Tony','Krishnarajapuram','Credit')
+INSERT INTO ACCOUNT VALUES(02,'Tony','Krishnarajapuram','Credit')
+                                     *
+ERROR at line 1:
+ORA-12899: value too large for column "SYSTEM"."ACCOUNT"."BRANCH" (actual: 16,
+maximum: 15)
+
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 03
+Enter value for name: Ashbin
+Enter value for branch: Hosur
+Enter value for type: Credit
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(03,'Ashbin','Hosur','Credit')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 04
+Enter value for name: Chaitanya
+Enter value for branch: Hebbal
+Enter value for type: Credit
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(04,'Chaitanya','Hebbal','Credit')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 05
+Enter value for name: Prithul
+Enter value for branch: Koramangala
+Enter value for type: Savings
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(05,'Prithul','Koramangala','Savings')
+
+1 row created.
+
+SQL> CREATE TABLE LOAN(AccNo int,Name varchar(10),Type varchar(10),Amt int);
+
+Table created.
+
+SQL> INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt);
+Enter value for accno: 1740201
+Enter value for name: Adarsh
+Enter value for type: House
+Enter value for amt: 100000
+old   1: INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt)
+new   1: INSERT INTO LOAN VALUES(1740201,'Adarsh','House',100000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt);
+Enter value for accno: 1740202
+Enter value for name: Tony
+Enter value for type: Car
+Enter value for amt: 20000
+old   1: INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt)
+new   1: INSERT INTO LOAN VALUES(1740202,'Tony','Car',20000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt);
+Enter value for accno: 1740203
+Enter value for name: Ashbin
+Enter value for type: Fridge
+Enter value for amt: 30000
+old   1: INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt)
+new   1: INSERT INTO LOAN VALUES(1740203,'Ashbin','Fridge',30000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt);
+Enter value for accno: 1740204
+Enter value for name: Chaitanya
+Enter value for type: Phone
+Enter value for amt: 50000
+old   1: INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt)
+new   1: INSERT INTO LOAN VALUES(1740204,'Chaitanya','Phone',50000)
+
+1 row created.
+
+SQL> INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt);
+Enter value for accno: 1740205
+Enter value for name: Prithul
+Enter value for type: Bike
+Enter value for amt: 300000
+old   1: INSERT INTO LOAN VALUES(&AccNo,'&Name','&Type',&Amt)
+new   1: INSERT INTO LOAN VALUES(1740205,'Prithul','Bike',300000)
+
+1 row created.
+
+SQL> SELECT * FROM LOAN;
+
+     ACCNO NAME       TYPE              AMT
+---------- ---------- ---------- ----------
+   1740201 Adarsh     House          100000
+   1740202 Tony       Car             20000
+   1740203 Ashbin     Fridge          30000
+   1740204 Chaitanya  Phone           50000
+   1740205 Prithul    Bike           300000
+
+SQL> SELECT * FROM ACCOUNT;
+
+     ACCNO NAME       BRANCH          TYPE
+---------- ---------- --------------- ----------
+         1 Adarsh     Jalahalli       Debit
+         3 Ashbin     Hosur           Credit
+         4 Chaitanya  Hebbal          Credit
+         5 Prithul    Koramangala     Savings
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch',&Debit);
+Enter value for accno: 2
+Enter value for name: Tony
+Enter value for branch: Hennur
+Enter value for debit: credit
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch',&Debit)
+new   1: INSERT INTO ACCOUNT VALUES(2,'Tony','Hennur',credit)
+INSERT INTO ACCOUNT VALUES(2,'Tony','Hennur',credit)
+                                             *
+ERROR at line 1:
+ORA-00984: column not allowed here
+
+
+SQL> DROP TABLE ACCOUNT;
+
+Table dropped.
+
+SQL> CREATE TABLE ACCOUNT(AccNo int,Name varchar(10),Branch varchar(15),Type varchar(10));
+
+Table created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 1
+Enter value for name: Adarsh
+Enter value for branch: Jalahalli
+Enter value for type: Savings
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(1,'Adarsh','Jalahalli','Savings')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 2
+Enter value for name: Tony
+Enter value for branch: Hennur
+Enter value for type: Current
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(2,'Tony','Hennur','Current')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 3
+Enter value for name: Ashbin
+Enter value for branch: Hosur
+Enter value for type: Fixed
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(3,'Ashbin','Hosur','Fixed')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 4
+Enter value for name: Chaitanya
+Enter value for branch: Hebbal
+Enter value for type: Debit
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(4,'Chaitanya','Hebbal','Debit')
+
+1 row created.
+
+SQL> INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type');
+Enter value for accno: 5
+Enter value for name: Prithul
+Enter value for branch: Koramangala
+Enter value for type: Credit
+old   1: INSERT INTO ACCOUNT VALUES(&AccNo,'&Name','&Branch','&Type')
+new   1: INSERT INTO ACCOUNT VALUES(5,'Prithul','Koramangala','Credit')
+
+1 row created.
+
+SQL> SELECT * FROM ACCOUNT INNER JOIN LOAN ON ACCOUNT.AccNo=LOAN.Accno;
+
+no rows selected
+
+SQL> SELECT * FROM ACCOUNT LEFT JOIN LOAN ON ACCOUNT.AccNo=LOAN.Accno;
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+         5 Prithul    Koramangala     Credit
+
+
+         4 Chaitanya  Hebbal          Debit
+
+
+         3 Ashbin     Hosur           Fixed
+
+
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+         1 Adarsh     Jalahalli       Savings
+
+
+         2 Tony       Hennur          Current
+
+
+
+SQL> SELECT * FROM ACCOUNT RIGHT JOIN LOAN ON ACCOUNT.AccNo=LOAN.Accno;
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+                                                    1740201 Adarsh
+House          100000
+
+                                                    1740202 Tony
+Car             20000
+
+                                                    1740204 Chaitanya
+Phone           50000
+
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+                                                    1740203 Ashbin
+Fridge          30000
+
+                                                    1740205 Prithul
+Bike           300000
+
+
+SQL> SELECT * FROM ACCOUNT RIGHT JOIN LOAN ON ACCOUNT.AccNo=LOAN.Accno;
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+                                                    1740201 Adarsh
+House          100000
+
+                                                    1740202 Tony
+Car             20000
+
+                                                    1740204 Chaitanya
+Phone           50000
+
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+                                                    1740203 Ashbin
+Fridge          30000
+
+                                                    1740205 Prithul
+Bike           300000
+
+
+SQL> SELECT * FROM ACCOUNT FULL JOIN LOAN ON ACCOUNT.AccNo=LOAN.Accno;
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+                                                    1740201 Adarsh
+House          100000
+
+                                                    1740202 Tony
+Car             20000
+
+                                                    1740203 Ashbin
+Fridge          30000
+
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+                                                    1740204 Chaitanya
+Phone           50000
+
+                                                    1740205 Prithul
+Bike           300000
+
+         5 Prithul    Koramangala     Credit
+
+
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+         4 Chaitanya  Hebbal          Debit
+
+
+         3 Ashbin     Hosur           Fixed
+
+
+         1 Adarsh     Jalahalli       Savings
+
+
+
+     ACCNO NAME       BRANCH          TYPE            ACCNO NAME
+---------- ---------- --------------- ---------- ---------- ----------
+TYPE              AMT
+---------- ----------
+         2 Tony       Hennur          Current
+
+
+
+10 rows selected.

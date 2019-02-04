@@ -1,0 +1,375 @@
+SQL> create table permanent_emp(empid int,ename varchar(10),position varchar(10),dateofbirth varchar(10),salary float));
+
+SQL> CREATE TABLE  permanent_emp(empid int,ename varchar(10),position varchar(10),dateofbirth varchar(10),salary float);
+
+Table created.
+
+SQL> CREATE TABLE  contract_emp(empid int,ename varchar(10),position varchar(10),dateofbirth varchar(10),salary float);
+
+Table created.
+
+SQL> DESC permanent_emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPID                                              NUMBER(38)
+ ENAME                                              VARCHAR2(10)
+ POSITION                                           VARCHAR2(10)
+ DATEOFBIRTH                                        VARCHAR2(10)
+ SALARY                                             FLOAT(126)
+
+SQL> DESC contract_emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPID                                              NUMBER(38)
+ ENAME                                              VARCHAR2(10)
+ POSITION                                           VARCHAR2(10)
+ DATEOFBIRTH                                        VARCHAR2(10)
+ SALARY                                             FLOAT(126)
+
+SQL> INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 01
+Enter value for ename: Snigdha
+Enter value for position: CEO
+Enter value for dateofbirth: 25/06/99
+Enter value for salary: 100000
+old   1: INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO permanent_emp values(01,'Snigdha','CEO','25/06/99',100000)
+
+1 row created.
+
+SQL> INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 02
+Enter value for ename: Yana
+Enter value for position: Manager
+Enter value for dateofbirth: 24/10/98
+Enter value for salary: 200000
+old   1: INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO permanent_emp values(02,'Yana','Manager','24/10/98',200000)
+
+1 row created.
+
+SQL> INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 03
+Enter value for ename: Jeevan
+Enter value for position: HR
+Enter value for dateofbirth: 14/09/99
+Enter value for salary: 5000
+old   1: INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO permanent_emp values(03,'Jeevan','HR','14/09/99',5000)
+
+1 row created.
+
+SQL> INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 04
+Enter value for ename: Shornabho
+Enter value for position: Clerk
+Enter value for dateofbirth: 24/10/98
+Enter value for salary: 9000
+old   1: INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO permanent_emp values(04,'Shornabho','Clerk','24/10/98',9000)
+
+1 row created.
+
+SQL> INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 05
+Enter value for ename: Chaitanya
+Enter value for position: Coder
+Enter value for dateofbirth: 22/05/99
+Enter value for salary: 12000
+old   1: INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO permanent_emp values(05,'Chaitanya','Coder','22/05/99',12000)
+
+1 row created.
+
+SQL> INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: p
+Enter value for ename: 
+Enter value for position: 
+Enter value for dateofbirth: 
+Enter value for salary: 
+old   1: INSERT INTO permanent_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO permanent_emp values(p,'','','',)
+INSERT INTO permanent_emp values(p,'','','',)
+                                            *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> 
+SQL> INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 01
+Enter value for ename: Yiyasu
+Enter value for position: Receptionist
+Enter value for dateofbirth: 5/06/98
+Enter value for salary: 13000
+old   1: INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO contract_emp values(01,'Yiyasu','Receptionist','5/06/98',13000)
+INSERT INTO contract_emp values(01,'Yiyasu','Receptionist','5/06/98',13000)
+                                            *
+ERROR at line 1:
+ORA-12899: value too large for column "SYSTEM"."CONTRACT_EMP"."POSITION" 
+(actual: 12, maximum: 10) 
+
+
+SQL> INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 01
+Enter value for ename: Yiyasu
+Enter value for position: Reception
+Enter value for dateofbirth: 5/06/98
+Enter value for salary: 13000
+old   1: INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO contract_emp values(01,'Yiyasu','Reception','5/06/98',13000)
+
+1 row created.
+
+SQL> INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 02
+Enter value for ename: Anushka
+Enter value for position: CFO
+Enter value for dateofbirth: 6/01/98
+Enter value for salary: 18000
+old   1: INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO contract_emp values(02,'Anushka','CFO','6/01/98',18000)
+
+1 row created.
+
+SQL> INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 03
+Enter value for ename: Parth
+Enter value for position: Manager
+Enter value for dateofbirth: 18/11/98
+Enter value for salary: 16500
+old   1: INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO contract_emp values(03,'Parth','Manager','18/11/98',16500)
+
+1 row created.
+
+SQL> INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 04
+Enter value for ename: Yash
+Enter value for position: Clerk
+Enter value for dateofbirth: 12/09/96
+Enter value for salary: 22000
+old   1: INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO contract_emp values(04,'Yash','Clerk','12/09/96',22000)
+
+1 row created.
+
+SQL> INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary);
+Enter value for empid: 05
+Enter value for ename: Mayuri
+Enter value for position: Marketing
+Enter value for dateofbirth: 06/02/99
+Enter value for salary: 400000
+old   1: INSERT INTO contract_emp values(&empid,'&ename','&position','&dateofbirth',&salary)
+new   1: INSERT INTO contract_emp values(05,'Mayuri','Marketing','06/02/99',400000)
+
+1 row created.
+
+SQL> SELECT UPPER(ename) FROM contract_emp;
+
+UPPER(ENAM                                                                      
+----------                                                                      
+YIYASU                                                                          
+ANUSHKA                                                                         
+PARTH                                                                           
+YASH                                                                            
+MAYURI                                                                          
+
+SQL> SELECT LOWER(ename) FROM contract_emp;
+
+LOWER(ENAM                                                                      
+----------                                                                      
+yiyasu                                                                          
+anushka                                                                         
+parth                                                                           
+yash                                                                            
+mayuri                                                                          
+
+SQL> SELECT reverse(ename) FROM contract_emp;
+
+REVERSE(EN                                                                      
+----------                                                                      
+usayiY                                                                          
+akhsunA                                                                         
+htraP                                                                           
+hsaY                                                                            
+iruyaM                                                                          
+
+SQL> SELECT length(ename) FROM contract_emp;
+
+LENGTH(ENAME)                                                                   
+-------------                                                                   
+            6                                                                   
+            7                                                                   
+            5                                                                   
+            4                                                                   
+            6                                                                   
+
+SQL> SELECT substr(ename,1,3) FROM contract_emp;
+
+SUBSTR(ENAME                                                                    
+------------                                                                    
+Yiy                                                                             
+Anu                                                                             
+Par                                                                             
+Yas                                                                             
+May                                                                             
+
+SQL> SELECT sysdate - dateofbirth FROM permanent_emp;
+SELECT sysdate - dateofbirth FROM permanent_emp
+                 *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> SELECT (sysdate - dateofbirth) FROM permanent_emp;
+SELECT (sysdate - dateofbirth) FROM permanent_emp
+                  *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> SELECT (sysdate-dateofbirth) FROM permanent_emp;
+SELECT (sysdate-dateofbirth) FROM permanent_emp
+                *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> SELECT (current_date-dateofbirth)/365 FROM permanent_emp;
+SELECT (current_date-dateofbirth)/365 FROM permanent_emp
+                    *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+SQL> SELECT ename,(current_date-dateofbirth)/365 FROM permanent_emp;
+SELECT ename,(current_date-dateofbirth)/365 FROM permanent_emp
+                          *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+SQL> SELECT ename,(sysdate-dateofbirth)/365 FROM permanent_emp;
+SELECT ename,(sysdate-dateofbirth)/365 FROM permanent_emp
+                     *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+SQL> SELECT substr(ename,1,3) FROM permanent_emp;
+
+SUBSTR(ENAME                                                                    
+------------                                                                    
+Sni                                                                             
+Yan                                                                             
+Jee                                                                             
+Sho                                                                             
+Cha                                                                             
+
+SQL> SELECT permanent_emp.ename,contract_emp.ename FROM permanent_emp,contract_emp;
+
+ENAME      ENAME                                                                
+---------- ----------                                                           
+Snigdha    Yiyasu                                                               
+Snigdha    Anushka                                                              
+Snigdha    Parth                                                                
+Snigdha    Yash                                                                 
+Snigdha    Mayuri                                                               
+Yana       Yiyasu                                                               
+Yana       Anushka                                                              
+Yana       Parth                                                                
+Yana       Yash                                                                 
+Yana       Mayuri                                                               
+Jeevan     Yiyasu                                                               
+
+ENAME      ENAME                                                                
+---------- ----------                                                           
+Jeevan     Anushka                                                              
+Jeevan     Parth                                                                
+Jeevan     Yash                                                                 
+Jeevan     Mayuri                                                               
+Shornabho  Yiyasu                                                               
+Shornabho  Anushka                                                              
+Shornabho  Parth                                                                
+Shornabho  Yash                                                                 
+Shornabho  Mayuri                                                               
+Chaitanya  Yiyasu                                                               
+Chaitanya  Anushka                                                              
+
+ENAME      ENAME                                                                
+---------- ----------                                                           
+Chaitanya  Parth                                                                
+Chaitanya  Yash                                                                 
+Chaitanya  Mayuri                                                               
+
+25 rows selected.
+
+SQL> SELECT ename FROM permanent_emp UNION ALL SELECT ename FROM contract_emp;
+
+ENAME                                                                           
+----------                                                                      
+Snigdha                                                                         
+Yana                                                                            
+Jeevan                                                                          
+Shornabho                                                                       
+Chaitanya                                                                       
+Yiyasu                                                                          
+Anushka                                                                         
+Parth                                                                           
+Yash                                                                            
+Mayuri                                                                          
+
+10 rows selected.
+
+SQL> SELECT position FROM permanent_emp UNION ALL SELECT position FROM contract_emp;
+
+POSITION                                                                        
+----------                                                                      
+CEO                                                                             
+Manager                                                                         
+HR                                                                              
+Clerk                                                                           
+Coder                                                                           
+Reception                                                                       
+CFO                                                                             
+Manager                                                                         
+Clerk                                                                           
+Marketing                                                                       
+
+10 rows selected.
+
+SQL> SELECT position FROM permanent_emp MINUS SELECT position FROM contract_emp;
+
+POSITION                                                                        
+----------                                                                      
+CEO                                                                             
+Coder                                                                           
+HR                                                                              
+
+SQL> SELECT * FROM PERMANENT_emp;
+
+     EMPID ENAME      POSITION   DATEOFBIRT     SALARY                          
+---------- ---------- ---------- ---------- ----------                          
+         1 Snigdha    CEO        25/06/99       100000                          
+         2 Yana       Manager    24/10/98       200000                          
+         3 Jeevan     HR         14/09/99         5000                          
+         4 Shornabho  Clerk      24/10/98         9000                          
+         5 Chaitanya  Coder      22/05/99        12000                          
+
+SQL> UPDATE PERMANENT_EMP set dateofbirth = '25-Jun-99';
+
+5 rows updated.
+
+SQL> SELECT * FROM PERMANENT_emp;
+
+     EMPID ENAME      POSITION   DATEOFBIRT     SALARY                          
+---------- ---------- ---------- ---------- ----------                          
+         1 Snigdha    CEO        25-Jun-99      100000                          
+         2 Yana       Manager    25-Jun-99      200000                          
+         3 Jeevan     HR         25-Jun-99        5000                          
+         4 Shornabho  Clerk      25-Jun-99        9000                          
+         5 Chaitanya  Coder      25-Jun-99       12000                          
+
+SQL> spool off;

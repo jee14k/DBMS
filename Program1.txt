@@ -1,0 +1,344 @@
+SQL> CREATE TABLE STUDENT(ROLL_NO INT, SNAME VARCHAR(20), CLASS VARCHAR(3), MARKS INT, GRADE VARCHAR(2), 
+
+FEES INT);
+
+Table created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS,
+ '&GRADE', &FEES);
+
+
+
+
+Enter value for roll_no: 1740135
+Enter value for sname: CHERIF
+Enter value for class: CME
+Enter value for marks: 83
+Enter value for grade: A
+Enter value for fees: 60000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740135, 'CHERIF', 'CME', 83, 'A', 60000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 1740232
+Enter value for sname: SANJU
+Enter value for class: CMS
+Enter value for marks: 42
+Enter value for grade: C
+Enter value for fees: 60000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740232, 'SANJU', 'CMS', 42, 'C', 60000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 1740245
+Enter value for sname: MUSSA JOLI
+Enter value for class: CMS
+Enter value for marks: 80
+Enter value for grade: A
+Enter value for fees: 60000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740245, 'MUSSA JOLI', 'CMS', 80, 'A', 60000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 1740145
+Enter value for sname: HASNAIN
+Enter value for class: CME
+Enter value for marks: 91
+Enter value for grade: A
+Enter value for fees: 60000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740145, 'HASNAIN', 'CME', 91, 'A', 60000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 1740834
+Enter value for sname: ARJUN SHOW
+Enter value for class: BBA
+Enter value for marks: 67
+Enter value for grade: O
+Enter value for fees: 70000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740834, 'ARJUN SHOW', 'BBA', 67, 'O', 70000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 1740323
+Enter value for sname: SHALINI
+Enter value for class: BCA
+Enter value for marks: 55
+Enter value for grade: B
+Enter value for fees: 70000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740323, 'SHALINI', 'BCA', 55, 'B', 70000)
+
+1 row created.
+
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 1740422
+Enter value for sname: PREETHA
+Enter value for class: BCO
+Enter value for marks: 89
+Enter value for grade: A
+Enter value for fees: 70000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740422, 'PREETHA', 'BCO', 89, 'A', 70000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 174532
+Enter value for sname: STALINE
+Enter value for class: BCO
+Enter value for marks: 34
+Enter value for grade: F
+Enter value for fees: 70000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(174532, 'STALINE', 'BCO', 34, 'F', 70000)
+
+1 row created.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 1740194
+Enter value for sname: UNKNOWN
+Enter value for class: CME
+Enter value for marks: 35
+Enter value for grade: F
+Enter value for fees: 60000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740194, 'UNKNOWN', 'CME', 35, 'F', 60000)
+
+1 row created.
+
+SQL> DESCRIBE STUDENT;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLL_NO                                            NUMBER(38)
+ SNAME                                              VARCHAR2(20)
+ CLASS                                              VARCHAR2(3)
+ MARKS                                              NUMBER(38)
+ GRADE                                              VARCHAR2(2)
+ FEES                                               NUMBER(38)
+
+SQL> SELECT * FROM STUDENT;
+
+   ROLL_NO SNAME                CLA      MARKS GR       FEES                    
+---------- -------------------- --- ---------- -- ----------                    
+   1740135 CHERIF               CME         83 A       60000                    
+   1740232 SANJU                CMS         42 C       60000                    
+   1740245 MUSSA JOLI           CMS         80 A       60000                    
+   1740145 HASNAIN              CME         91 A       60000                    
+   1740834 ARJUN SHOW           BBA         67 O       70000                    
+   1740323 SHALINI              BCA         55 B       70000                    
+   1740422 PREETHA              BCO         89 A       70000                    
+    174532 STALINE              BCO         34 F       70000                    
+   1740194 UNKNOWN              CME         35 F       60000                    
+
+9 rows selected.
+
+SQL> INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES);
+Enter value for roll_no: 1740342
+Enter value for sname: DIANA MOUC
+Enter value for class: BCA
+Enter value for marks: 75
+Enter value for grade: B
+Enter value for fees: 70000
+old   1: INSERT INTO STUDENT VALUES(&ROLL_NO, '&SNAME', '&CLASS', &MARKS, '&GRADE', &FEES)
+new   1: INSERT INTO STUDENT VALUES(1740342, 'DIANA MOUC', 'BCA', 75, 'B', 70000)
+
+1 row created.
+
+SQL> SELECT * FROM STUDENT;
+
+   ROLL_NO SNAME                CLA      MARKS GR       FEES                    
+---------- -------------------- --- ---------- -- ----------                    
+   1740135 CHERIF               CME         83 A       60000                    
+   1740232 SANJU                CMS         42 C       60000                    
+   1740245 MUSSA JOLI           CMS         80 A       60000                    
+   1740145 HASNAIN              CME         91 A       60000                    
+   1740834 ARJUN SHOW           BBA         67 O       70000                    
+   1740323 SHALINI              BCA         55 B       70000                    
+   1740422 PREETHA              BCO         89 A       70000                    
+    174532 STALINE              BCO         34 F       70000                    
+   1740194 UNKNOWN              CME         35 F       60000                    
+   1740342 DIANA MOUC           BCA         75 B       70000                    
+
+10 rows selected.
+
+SQL> UPDATE STUDENT SET ROLL_NO=1740432 WHERE SNAME='STALINE';
+
+1 row updated.
+
+SQL> SELECT * FROM STUDENT;
+
+   ROLL_NO SNAME                CLA      MARKS GR       FEES                    
+---------- -------------------- --- ---------- -- ----------                    
+   1740135 CHERIF               CME         83 A       60000                    
+   1740232 SANJU                CMS         42 C       60000                    
+   1740245 MUSSA JOLI           CMS         80 A       60000                    
+   1740145 HASNAIN              CME         91 A       60000                    
+   1740834 ARJUN SHOW           BBA         67 O       70000                    
+   1740323 SHALINI              BCA         55 B       70000                    
+   1740422 PREETHA              BCO         89 A       70000                    
+   1740432 STALINE              BCO         34 F       70000                    
+   1740194 UNKNOWN              CME         35 F       60000                    
+   1740342 DIANA MOUC           BCA         75 B       70000                    
+
+10 rows selected.
+
+SQL> DESCRIBE STUDENT;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLL_NO                                            NUMBER(38)
+ SNAME                                              VARCHAR2(20)
+ CLASS                                              VARCHAR2(3)
+ MARKS                                              NUMBER(38)
+ GRADE                                              VARCHAR2(2)
+ FEES                                               NUMBER(38)
+
+SQL> SELECT * FROM STUDENT;
+
+   ROLL_NO SNAME                CLA      MARKS GR       FEES                    
+---------- -------------------- --- ---------- -- ----------                    
+   1740135 CHERIF               CME         83 A       60000                    
+   1740232 SANJU                CMS         42 C       60000                    
+   1740245 MUSSA JOLI           CMS         80 A       60000                    
+   1740145 HASNAIN              CME         91 A       60000                    
+   1740834 ARJUN SHOW           BBA         67 O       70000                    
+   1740323 SHALINI              BCA         55 B       70000                    
+   1740422 PREETHA              BCO         89 A       70000                    
+   1740432 STALINE              BCO         34 F       70000                    
+   1740194 UNKNOWN              CME         35 F       60000                    
+   1740342 DIANA MOUC           BCA         75 B       70000                    
+
+10 rows selected.
+
+SQL> SELECT SNAME FROM STUDENT WHERE GRADE='O';
+
+SNAME                                                                           
+--------------------                                                            
+ARJUN SHOW                                                                      
+
+SQL> SELECT SNAME FROM STUDENT WHERE FEES>60000;
+
+SNAME                                                                           
+--------------------                                                            
+ARJUN SHOW                                                                      
+SHALINI                                                                         
+PREETHA                                                                         
+STALINE                                                                         
+DIANA MOUC                                                                      
+
+SQL> SELECT ROLL_NO, NAME FROM STUDENT WHERE MARKS BETWEEN 40 AND 50;
+SELECT ROLL_NO, NAME FROM STUDENT WHERE MARKS BETWEEN 40 AND 50
+                *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL> SELECT ROLL_NO, SNAME FROM STUDENT WHERE MARKS BETWEEN 40 AND 50;
+
+   ROLL_NO SNAME                                                                
+---------- --------------------                                                 
+   1740232 SANJU                                                                
+
+SQL> SELECT * FROM STUDENT WHERE CLASS='CME' AND  MARKS<40;
+
+   ROLL_NO SNAME                CLA      MARKS GR       FEES                    
+---------- -------------------- --- ---------- -- ----------                    
+   1740194 UNKNOWN              CME         35 F       60000                    
+
+SQL> SELECT * FROM STUDENT WHERE GRADE='A' OR GRADE='C';
+
+   ROLL_NO SNAME                CLA      MARKS GR       FEES                    
+---------- -------------------- --- ---------- -- ----------                    
+   1740135 CHERIF               CME         83 A       60000                    
+   1740232 SANJU                CMS         42 C       60000                    
+   1740245 MUSSA JOLI           CMS         80 A       60000                    
+   1740145 HASNAIN              CME         91 A       60000                    
+   1740422 PREETHA              BCO         89 A       70000                    
+
+SQL> SELECT ROLL_NO, NAME FROM STUDENT WHERE CLASS='CME';
+SELECT ROLL_NO, NAME FROM STUDENT WHERE CLASS='CME'
+                *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL> SELECT ROLL_NO, SNAME FROM STUDENT WHERE CLASS='CME';
+
+   ROLL_NO SNAME                                                                
+---------- --------------------                                                 
+   1740135 CHERIF                                                               
+   1740145 HASNAIN                                                              
+   1740194 UNKNOWN                                                              
+
+SQL> SELECT SNAME FROM STUDENT WHERE SNAME LIKE 's%';
+
+no rows selected
+
+SQL> SELECT SNAME FROM STUDENT WHERE SNAME LIKE 'S%';
+
+SNAME                                                                           
+--------------------                                                            
+SANJU                                                                           
+SHALINI                                                                         
+STALINE                                                                         
+
+SQL> SELECT ROLL_NO, SNAME FROM STUDENT WHERE NOT CLASS='CME' OR 
+
+CLASS='CMS';
+
+   ROLL_NO SNAME                                                                
+---------- --------------------                                                 
+   1740232 SANJU                                                                
+   1740245 MUSSA JOLI                                                           
+   1740834 ARJUN SHOW                                                           
+   1740323 SHALINI                                                              
+   1740422 PREETHA                                                              
+   1740432 STALINE                                                              
+   1740342 DIANA MOUC                                                           
+
+7 rows selected.
+
+SQL> SELECT ROLL_NO, SNAME,CLASS FROM STUDENT WHERE NOT CLASS='CME' OR CLASS='CMS';
+
+   ROLL_NO SNAME                CLA                                             
+---------- -------------------- ---                                             
+   1740232 SANJU                CMS                                             
+   1740245 MUSSA JOLI           CMS                                             
+   1740834 ARJUN SHOW           BBA                                             
+   1740323 SHALINI              BCA                                             
+   1740422 PREETHA              BCO                                             
+   1740432 STALINE              BCO                                             
+   1740342 DIANA MOUC           BCA                                             
+
+7 rows selected.
+
+SQL> SELECT ROLL_NO, SNAME,CLASS FROM STUDENT WHERE NOT CLASS='CME' AND CLASS='CMS';
+
+   ROLL_NO SNAME                CLA                                             
+---------- -------------------- ---                                             
+   1740232 SANJU                CMS                                             
+   1740245 MUSSA JOLI           CMS                                             
+
+SQL> SELECT ROLL_NO, SNAME,CLASS FROM STUDENT
+ WHERE NOT CLASS='CME' AND NOT CLASS='CMS';
+
+   ROLL_NO SNAME                CLA                                             
+---------- -------------------- ---                                             
+   1740834 ARJUN SHOW           BBA                                             
+   1740323 SHALINI              BCA                                             
+   1740422 PREETHA              BCO                                             
+   1740432 STALINE              BCO                                             
+   1740342 DIANA MOUC           BCA                                             
+
+SQL> SPOOL OFF;
